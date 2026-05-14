@@ -36,8 +36,8 @@
             dateTimePickerHK = new DateTimePicker();
             tFRONTBindingSourceHK = new BindingSource(components);
             labelSP = new Label();
-            dateTimePickerSP = new DateTimePicker();
             tFRONTBindingSourceSP = new BindingSource(components);
+            dateTimePickerSP = new DateTimePicker();
             tFRONTbindingSourceWebsite = new BindingSource(components);
             tFRONTBindingSourceReel = new BindingSource(components);
             tFRONTBindingCVEnv = new BindingSource(components);
@@ -108,8 +108,8 @@
             labelMada = new Label();
             buttonResetDay = new Button();
             labelJR = new Label();
-            dateTimePickerJR = new DateTimePicker();
             tFRONTBindingSourceJR = new BindingSource(components);
+            dateTimePickerJR = new DateTimePicker();
             administrationToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
@@ -237,6 +237,7 @@
             // 
             labelHK.AutoSize = true;
             labelHK.BackColor = SystemColors.Control;
+            labelHK.DataBindings.Add(new Binding("Text", tFRONTBindingSourceHK, "colSubject", true));
             labelHK.Location = new Point(917, 28);
             labelHK.Name = "labelHK";
             labelHK.Size = new Size(70, 15);
@@ -263,11 +264,18 @@
             // labelSP
             // 
             labelSP.AutoSize = true;
+            labelSP.DataBindings.Add(new Binding("Text", tFRONTBindingSourceSP, "colSubject", true));
             labelSP.Location = new Point(65, 247);
             labelSP.Name = "labelSP";
             labelSP.Size = new Size(35, 15);
             labelSP.TabIndex = 6;
             labelSP.Text = "Sport";
+            // 
+            // tFRONTBindingSourceSP
+            // 
+            tFRONTBindingSourceSP.DataMember = "TFRONT";
+            tFRONTBindingSourceSP.DataSource = dataSet11;
+            tFRONTBindingSourceSP.Filter = "colid='03'";
             // 
             // dateTimePickerSP
             // 
@@ -278,12 +286,6 @@
             dateTimePickerSP.Size = new Size(128, 23);
             dateTimePickerSP.TabIndex = 7;
             dateTimePickerSP.Validated += dateTimePickerSP_Validated;
-            // 
-            // tFRONTBindingSourceSP
-            // 
-            tFRONTBindingSourceSP.DataMember = "TFRONT";
-            tFRONTBindingSourceSP.DataSource = dataSet11;
-            tFRONTBindingSourceSP.Filter = "colid='03'";
             // 
             // tFRONTbindingSourceWebsite
             // 
@@ -340,6 +342,7 @@
             // labelCertificate
             // 
             labelCertificate.AutoSize = true;
+            labelCertificate.DataBindings.Add(new Binding("Text", tFRONTBindingSourceCertficate, "colSubject", true));
             labelCertificate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelCertificate.Location = new Point(15, 315);
             labelCertificate.Name = "labelCertificate";
@@ -392,6 +395,7 @@
             // labelPapers
             // 
             labelPapers.AutoSize = true;
+            labelPapers.DataBindings.Add(new Binding("Text", tFRONTBindingPapers, "colSubject", true));
             labelPapers.Location = new Point(15, 265);
             labelPapers.Name = "labelPapers";
             labelPapers.Size = new Size(42, 15);
@@ -417,6 +421,7 @@
             // labelMAT
             // 
             labelMAT.AutoSize = true;
+            labelMAT.DataBindings.Add(new Binding("Text", tFRONTbindingSourceMAT, "colSubject", true));
             labelMAT.Location = new Point(15, 158);
             labelMAT.Name = "labelMAT";
             labelMAT.Size = new Size(35, 15);
@@ -442,6 +447,7 @@
             // labelPRO
             // 
             labelPRO.AutoSize = true;
+            labelPRO.DataBindings.Add(new Binding("Text", tFRONTbindingSourcePRO, "colSubject", true));
             labelPRO.Location = new Point(15, 204);
             labelPRO.Name = "labelPRO";
             labelPRO.Size = new Size(22, 15);
@@ -467,6 +473,7 @@
             // labelMIT
             // 
             labelMIT.AutoSize = true;
+            labelMIT.DataBindings.Add(new Binding("Text", tFRINTbindingSourceMIT, "colSubject", true));
             labelMIT.Location = new Point(15, 112);
             labelMIT.Name = "labelMIT";
             labelMIT.Size = new Size(27, 15);
@@ -494,6 +501,7 @@
             // labelLLM
             // 
             labelLLM.AutoSize = true;
+            labelLLM.DataBindings.Add(new Binding("Text", tFRONTBindingLLM, "colSubject", true));
             labelLLM.Location = new Point(15, 59);
             labelLLM.Name = "labelLLM";
             labelLLM.Size = new Size(30, 15);
@@ -543,78 +551,78 @@
             // 
             contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, certificateToolStripMenuItem, toolStripSeparator3, arazakarMenuItem, jobSearchToolStripMenuItem, bCICToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, reelMenuItem, toolStripSeparator4, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
-            contextMenuStripHourly.Size = new Size(181, 364);
+            contextMenuStripHourly.Size = new Size(154, 342);
             // 
             // leadershipStripMenu
             // 
             leadershipStripMenu.Name = "leadershipStripMenu";
-            leadershipStripMenu.Size = new Size(180, 22);
+            leadershipStripMenu.Size = new Size(153, 22);
             leadershipStripMenu.Text = "Leadership";
             leadershipStripMenu.Click += leadershipStripMenu_Click;
             // 
             // learnToolStripMenuItem
             // 
             learnToolStripMenuItem.Name = "learnToolStripMenuItem";
-            learnToolStripMenuItem.Size = new Size(180, 22);
+            learnToolStripMenuItem.Size = new Size(153, 22);
             learnToolStripMenuItem.Text = "Learn";
             learnToolStripMenuItem.Click += learnToolStripMenuItem_Click;
             // 
             // certificateToolStripMenuItem
             // 
             certificateToolStripMenuItem.Name = "certificateToolStripMenuItem";
-            certificateToolStripMenuItem.Size = new Size(180, 22);
+            certificateToolStripMenuItem.Size = new Size(153, 22);
             certificateToolStripMenuItem.Text = "Certificate";
             certificateToolStripMenuItem.Click += certificateToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(150, 6);
             // 
             // arazakarMenuItem
             // 
             arazakarMenuItem.Name = "arazakarMenuItem";
-            arazakarMenuItem.Size = new Size(180, 22);
+            arazakarMenuItem.Size = new Size(153, 22);
             arazakarMenuItem.Text = "Arazakar";
             arazakarMenuItem.Click += arazakarMenuItem_Click;
             // 
             // jobSearchToolStripMenuItem
             // 
             jobSearchToolStripMenuItem.Name = "jobSearchToolStripMenuItem";
-            jobSearchToolStripMenuItem.Size = new Size(180, 22);
+            jobSearchToolStripMenuItem.Size = new Size(153, 22);
             jobSearchToolStripMenuItem.Text = "Job Search";
             jobSearchToolStripMenuItem.Click += jobSearchToolStripMenuItem_Click;
             // 
             // bCICToolStripMenuItem
             // 
             bCICToolStripMenuItem.Name = "bCICToolStripMenuItem";
-            bCICToolStripMenuItem.Size = new Size(180, 22);
+            bCICToolStripMenuItem.Size = new Size(153, 22);
             bCICToolStripMenuItem.Text = "BCIC";
             bCICToolStripMenuItem.Click += bCICToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(150, 6);
             // 
             // administrationToolStripMenuItem1
             // 
             administrationToolStripMenuItem1.Name = "administrationToolStripMenuItem1";
-            administrationToolStripMenuItem1.Size = new Size(180, 22);
+            administrationToolStripMenuItem1.Size = new Size(153, 22);
             administrationToolStripMenuItem1.Text = "Administration";
             administrationToolStripMenuItem1.Click += administrationToolStripMenuItem1_Click;
             // 
             // financeToolStripMenuItem
             // 
             financeToolStripMenuItem.Name = "financeToolStripMenuItem";
-            financeToolStripMenuItem.Size = new Size(180, 22);
+            financeToolStripMenuItem.Size = new Size(153, 22);
             financeToolStripMenuItem.Text = "Finance";
             financeToolStripMenuItem.Click += financeToolStripMenuItem_Click;
             // 
             // StategieMenuItem
             // 
             StategieMenuItem.Name = "StategieMenuItem";
-            StategieMenuItem.Size = new Size(180, 22);
+            StategieMenuItem.Size = new Size(153, 22);
             StategieMenuItem.Text = "Strategie";
             StategieMenuItem.Click += StategieMenuItem_Click;
             // 
@@ -622,50 +630,50 @@
             // 
             reelMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
             reelMenuItem.Name = "reelMenuItem";
-            reelMenuItem.Size = new Size(180, 22);
+            reelMenuItem.Size = new Size(153, 22);
             reelMenuItem.Text = "Réél";
             reelMenuItem.Click += reelMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(150, 6);
             // 
             // leTempsToolStripMenuItem
             // 
             leTempsToolStripMenuItem.Name = "leTempsToolStripMenuItem";
-            leTempsToolStripMenuItem.Size = new Size(180, 22);
+            leTempsToolStripMenuItem.Size = new Size(153, 22);
             leTempsToolStripMenuItem.Text = "Le Temps";
             leTempsToolStripMenuItem.Click += leTempsToolStripMenuItem_Click;
             // 
             // madaStripMenuItem
             // 
             madaStripMenuItem.Name = "madaStripMenuItem";
-            madaStripMenuItem.Size = new Size(180, 22);
+            madaStripMenuItem.Size = new Size(153, 22);
             madaStripMenuItem.Text = "Mada";
             madaStripMenuItem.Click += madaStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(177, 6);
+            toolStripSeparator5.Size = new Size(150, 6);
             // 
             // autreToolStripMenuItem
             // 
             autreToolStripMenuItem.Name = "autreToolStripMenuItem";
-            autreToolStripMenuItem.Size = new Size(180, 22);
+            autreToolStripMenuItem.Size = new Size(153, 22);
             autreToolStripMenuItem.Text = "Autre";
             autreToolStripMenuItem.Click += autreToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(150, 6);
             // 
             // noneToolStripMenuItem
             // 
             noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            noneToolStripMenuItem.Size = new Size(180, 22);
+            noneToolStripMenuItem.Size = new Size(153, 22);
             noneToolStripMenuItem.Text = "None";
             noneToolStripMenuItem.Click += noneToolStripMenuItem_Click;
             // 
@@ -706,6 +714,7 @@
             // labelAdmin
             // 
             labelAdmin.AutoSize = true;
+            labelAdmin.DataBindings.Add(new Binding("Text", tFRONTBindingAdministration, "colSubject", true));
             labelAdmin.Location = new Point(22, 104);
             labelAdmin.Name = "labelAdmin";
             labelAdmin.Size = new Size(86, 15);
@@ -731,6 +740,7 @@
             // labelFinance
             // 
             labelFinance.AutoSize = true;
+            labelFinance.DataBindings.Add(new Binding("Text", tFRONTBindingFinance, "colSubject", true));
             labelFinance.Location = new Point(22, 40);
             labelFinance.Name = "labelFinance";
             labelFinance.Size = new Size(48, 15);
@@ -788,6 +798,7 @@
             // labelMiremont
             // 
             labelMiremont.AutoSize = true;
+            labelMiremont.DataBindings.Add(new Binding("Text", tFRONTBindingMiremont, "colSubject", true));
             labelMiremont.Location = new Point(15, 102);
             labelMiremont.Name = "labelMiremont";
             labelMiremont.Size = new Size(60, 15);
@@ -813,6 +824,7 @@
             // labelMada
             // 
             labelMada.AutoSize = true;
+            labelMada.DataBindings.Add(new Binding("Text", tFRONTBindingMada, "colSubject", true));
             labelMada.Location = new Point(16, 40);
             labelMada.Name = "labelMada";
             labelMada.Size = new Size(37, 15);
@@ -832,11 +844,18 @@
             // labelJR
             // 
             labelJR.AutoSize = true;
+            labelJR.DataBindings.Add(new Binding("Text", tFRONTBindingSourceJR, "colSubject", true));
             labelJR.Location = new Point(82, 287);
             labelJR.Name = "labelJR";
             labelJR.Size = new Size(18, 15);
             labelJR.TabIndex = 16;
             labelJR.Text = "JR";
+            // 
+            // tFRONTBindingSourceJR
+            // 
+            tFRONTBindingSourceJR.DataMember = "TFRONT";
+            tFRONTBindingSourceJR.DataSource = dataSet11;
+            tFRONTBindingSourceJR.Filter = "colid='18'";
             // 
             // dateTimePickerJR
             // 
@@ -847,12 +866,6 @@
             dateTimePickerJR.Size = new Size(129, 23);
             dateTimePickerJR.TabIndex = 17;
             dateTimePickerJR.Validated += dateTimePickerJR_Validated;
-            // 
-            // tFRONTBindingSourceJR
-            // 
-            tFRONTBindingSourceJR.DataMember = "TFRONT";
-            tFRONTBindingSourceJR.DataSource = dataSet11;
-            tFRONTBindingSourceJR.Filter = "colid='18'";
             // 
             // administrationToolStripMenuItem
             // 
@@ -1061,6 +1074,7 @@
             // labelJD
             // 
             labelJD.AutoSize = true;
+            labelJD.DataBindings.Add(new Binding("Text", tFRONTBindingJardin, "colSubject", true));
             labelJD.Location = new Point(18, 82);
             labelJD.Name = "labelJD";
             labelJD.Size = new Size(38, 15);
@@ -1070,6 +1084,7 @@
             // labelVL
             // 
             labelVL.AutoSize = true;
+            labelVL.DataBindings.Add(new Binding("Text", tFRONTBindingVilla, "colSubject", true));
             labelVL.Location = new Point(18, 45);
             labelVL.Name = "labelVL";
             labelVL.Size = new Size(29, 15);
@@ -1216,6 +1231,7 @@
             // labelWebSite
             // 
             labelWebSite.AutoSize = true;
+            labelWebSite.DataBindings.Add(new Binding("Text", tFRONTbindingSourceWebsite, "colSubject", true));
             labelWebSite.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelWebSite.Location = new Point(26, 144);
             labelWebSite.Name = "labelWebSite";
@@ -1236,6 +1252,7 @@
             // labelReel
             // 
             labelReel.AutoSize = true;
+            labelReel.DataBindings.Add(new Binding("Text", tFRONTBindingSourceReel, "colSubject", true));
             labelReel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelReel.Location = new Point(23, 357);
             labelReel.Name = "labelReel";
@@ -1256,6 +1273,7 @@
             // labelCVEnv
             // 
             labelCVEnv.AutoSize = true;
+            labelCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colSubject", true));
             labelCVEnv.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelCVEnv.Location = new Point(26, 281);
             labelCVEnv.Name = "labelCVEnv";
@@ -1276,6 +1294,7 @@
             // labelArazakar
             // 
             labelArazakar.AutoSize = true;
+            labelArazakar.DataBindings.Add(new Binding("Text", tFRONTBindingArazakar, "colSubject", true));
             labelArazakar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelArazakar.Location = new Point(26, 237);
             labelArazakar.Name = "labelArazakar";
@@ -1286,6 +1305,7 @@
             // labelBonneManiere
             // 
             labelBonneManiere.AutoSize = true;
+            labelBonneManiere.DataBindings.Add(new Binding("Text", tFRONTBindingSourceBonneManiere, "colSubject", true));
             labelBonneManiere.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelBonneManiere.Location = new Point(26, 81);
             labelBonneManiere.Name = "labelBonneManiere";
@@ -1301,11 +1321,12 @@
             dateTimePickerCentura.Name = "dateTimePickerCentura";
             dateTimePickerCentura.Size = new Size(131, 23);
             dateTimePickerCentura.TabIndex = 5;
-            dateTimePickerCentura.Validated += dateTimePickerCVLecture_Validated;
+            dateTimePickerCentura.Validated += dateTimePickerCentura_Validated;
             // 
             // labelCentura
             // 
             labelCentura.AutoSize = true;
+            labelCentura.DataBindings.Add(new Binding("Text", tFRONTBindingCentura, "colSubject", true));
             labelCentura.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelCentura.Location = new Point(26, 196);
             labelCentura.Name = "labelCentura";
@@ -1326,6 +1347,7 @@
             // labelLeaderShip
             // 
             labelLeaderShip.AutoSize = true;
+            labelLeaderShip.DataBindings.Add(new Binding("Text", tFRONTBindingLeadership, "colSubject", true));
             labelLeaderShip.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelLeaderShip.Location = new Point(26, 38);
             labelLeaderShip.Name = "labelLeaderShip";
@@ -1342,7 +1364,7 @@
             dateTimePickerLeadership.Name = "dateTimePickerLeadership";
             dateTimePickerLeadership.Size = new Size(128, 23);
             dateTimePickerLeadership.TabIndex = 2;
-            dateTimePickerLeadership.Validated += dateTimePickerCV_Validated;
+            dateTimePickerLeadership.Validated += dateTimePickerLeaderShip_Validated;
             // 
             // tLANGUAGEBindingSource
             // 

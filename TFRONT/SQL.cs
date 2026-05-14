@@ -139,7 +139,7 @@ namespace TFRONT
 
         public DataAdapter GetDataAdapterFront()
         {
-            return getDataAdapter("select colid , colDat, colCycle from [winman].[dbo].[TBL_TFRONT]");
+            return getDataAdapter("select colid , colDat, colCycle, colSubject from [winman].[dbo].[TBL_TFRONT]");
           
         }
 

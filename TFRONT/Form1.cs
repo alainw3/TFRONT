@@ -298,13 +298,13 @@ namespace TFRONT
             label_Color(dateTimePickerMiremont, labelMiremont, cycleMiremont);
         }
 
-        private void dateTimePickerCV_Validated(object sender, EventArgs e)
+        private void dateTimePickerLeaderShip_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerLeadership, tFRONTBindingLeadership.Filter);
             label_Color(dateTimePickerLeadership, labelLeaderShip, cycleBonneManiere);
         }
 
-        private void dateTimePickerCVLecture_Validated(object sender, EventArgs e)
+        private void dateTimePickerCentura_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerCentura, tFRONTBindingCentura.Filter);
             label_Color(dateTimePickerCentura, labelCentura, cycleArazakar);

@@ -425,6 +425,8 @@ namespace TFRONT {
             
             private global::System.Data.DataColumn columncolCycle;
             
+            private global::System.Data.DataColumn columncolSubject;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TFRONTDataTable() {
@@ -484,6 +486,14 @@ namespace TFRONT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn colSubjectColumn {
+                get {
+                    return this.columncolSubject;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -519,12 +529,13 @@ namespace TFRONT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TFRONTRow AddTFRONTRow(string colid, System.DateTime colDat, short colCycle) {
+            public TFRONTRow AddTFRONTRow(string colid, System.DateTime colDat, short colCycle, string colSubject) {
                 TFRONTRow rowTFRONTRow = ((TFRONTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         colid,
                         colDat,
-                        colCycle};
+                        colCycle,
+                        colSubject};
                 rowTFRONTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTFRONTRow);
                 return rowTFRONTRow;
@@ -550,6 +561,7 @@ namespace TFRONT {
                 this.columncolid = base.Columns["colid"];
                 this.columncolDat = base.Columns["colDat"];
                 this.columncolCycle = base.Columns["colCycle"];
+                this.columncolSubject = base.Columns["colSubject"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -561,6 +573,8 @@ namespace TFRONT {
                 base.Columns.Add(this.columncolDat);
                 this.columncolCycle = new global::System.Data.DataColumn("colCycle", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncolCycle);
+                this.columncolSubject = new global::System.Data.DataColumn("colSubject", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncolSubject);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TFRONTKey1", new global::System.Data.DataColumn[] {
                                 this.columncolid}, false));
                 this.columncolid.Unique = true;
@@ -1973,6 +1987,22 @@ namespace TFRONT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string colSubject {
+                get {
+                    try {
+                        return ((string)(this[this.tableTFRONT.colSubjectColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'colSubject\' in table \'TFRONT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTFRONT.colSubjectColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscolidNull() {
                 return this.IsNull(this.tableTFRONT.colidColumn);
             }
@@ -2005,6 +2035,18 @@ namespace TFRONT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcolCycleNull() {
                 this[this.tableTFRONT.colCycleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscolSubjectNull() {
+                return this.IsNull(this.tableTFRONT.colSubjectColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcolSubjectNull() {
+                this[this.tableTFRONT.colSubjectColumn] = global::System.Convert.DBNull;
             }
         }
         
