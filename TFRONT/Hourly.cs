@@ -91,7 +91,7 @@ namespace TFRONT
             sQL.updateHourly(dayID, "7", hourID);
         }
 
-        public void updateHourlyCertificate()
+        public void updateHourlyCandidature()
         { 
             sQL.updateHourly(dayID, "8", hourID);
         }

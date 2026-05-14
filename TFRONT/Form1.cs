@@ -51,8 +51,8 @@ namespace TFRONT
         private Counter counter = new Counter();
 
 
-        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.Plum, Color.Blue};
-        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Certificate", "Strategie" };
+        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.LightSkyBlue, Color.Blue};
+        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Candidature", "Strategie" };
 
         public Form1()
         {
@@ -412,7 +412,7 @@ namespace TFRONT
                     }
                     else if (gridViewCell.Value.ToString() == "-")
                     {
-                        gridViewCell.Style.BackColor = Color.LightSkyBlue;
+                        gridViewCell.Style.BackColor = Color.LightBlue;
                         gridViewCell.ToolTipText = "Réel";
                     }
                     else
@@ -555,9 +555,9 @@ namespace TFRONT
             label_Color(dateTimePickerJardin, labelJD, cycleJD);
         }
 
-        private void certificateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void candidatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyCertificate();
+            hourly.updateHourlyCandidature();
             updateHourly();
         }
 
