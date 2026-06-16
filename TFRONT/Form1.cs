@@ -19,7 +19,7 @@ namespace TFRONT
 
         private const int cycleBonneManiere = -2;
         private const int cycleLeaderShip = -2;
-        private const int cycleArazakar = -7;
+        private const int cycleTFront06 = -7;
         private const int cycleCVEnv = -2;
         private const int cycleCentura = -3;
 
@@ -29,18 +29,18 @@ namespace TFRONT
 
         private const int cycleFinance = -2;
         private const int cycleAdmin = -2;
-        private const int cycleWebSite = -7;
+        private const int cycleTFront23 = -7;
 
         private const int cycleMada = -5;
         private const int cycleMiremont = -3;
 
         private const int cycleJR = -5;
         private const int cycleCertificate = -14;
-        private const int cycleReel = -2;
+        private const int cycleFront07 = -2;
 
         private const int cycleVL = -7;
         private const int cycleJD = -7;
-        private const int cyclePapers = -7;
+        private const int cycleTFront16 = -7;
 
         private Hourly hourly;
         private Front front;
@@ -51,7 +51,7 @@ namespace TFRONT
         private Counter counter = new Counter();
 
 
-        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.LightSkyBlue, Color.Blue};
+        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.LightSkyBlue, Color.Blue };
         private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Candidature", "Strategie" };
 
         public Form1()
@@ -153,7 +153,7 @@ namespace TFRONT
 
             // CV link  / français
             label_Color(dateTimePickerBonneManiere, labelBonneManiere, cycleBonneManiere);
-            label_Color(dateTimePickerArazakar, labelArazakar, cycleArazakar);
+            label_Color(dateTimePickerTFront06, labelTFront06, cycleTFront06);
 
             // Envoi candidature
             label_Color(dateTimePickerCVEnv, labelCVEnv, cycleCVEnv);
@@ -172,7 +172,7 @@ namespace TFRONT
 
             label_Color(dateTimePickerFinance, labelFinance, cycleFinance);
             label_Color(dateTimePickerAdmin, labelAdmin, cycleAdmin);
-            label_Color(dateTimePickerPapers, labelPapers, cyclePapers);
+            label_Color(dateTimePickerTFront16, labelTFront16, cycleTFront16);
 
             label_Color(dateTimePickerMada, labelMada, cycleMada);
             label_Color(dateTimePickerMiremont, labelMiremont, cycleMiremont);
@@ -180,12 +180,12 @@ namespace TFRONT
             label_Color(dateTimePickerJR, labelJR, cycleJR);
             label_Color(dateTimePickerCertificate, labelCertificate, cycleCertificate);
 
-            label_Color(dateTimePickerReel, labelReel, cycleReel);
+            label_Color(dateTimePickerTFront07, labelTFront07, cycleFront07);
 
             label_Color(dateTimePickerVilla, labelVL, cycleVL);
             label_Color(dateTimePickerJardin, labelJD, cycleJD);
 
-            label_Color(dateTimePickerWebSite, labelWebSite, cycleWebSite);
+            label_Color(dateTimePickerTFront23, labelTFront23, cycleTFront23);
 
 
         }
@@ -280,10 +280,10 @@ namespace TFRONT
             label_Color(dateTimePickerAdmin, labelAdmin, cycleAdmin);
         }
 
-        private void dateTimePickerPapers_Validated(object sender, EventArgs e)
+        private void dateTimePickerTFront16_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerPapers, tFRONTBindingPapers.Filter);
-            label_Color(dateTimePickerPapers, labelPapers, cycleWebSite);
+            commandSQL(dateTimePickerTFront16, tFRONTBindingTFront16.Filter);
+            label_Color(dateTimePickerTFront16, labelTFront16, cycleTFront23);
         }
 
         private void dateTimePickerMada_Validated(object sender, EventArgs e)
@@ -307,19 +307,19 @@ namespace TFRONT
         private void dateTimePickerCentura_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerCentura, tFRONTBindingCentura.Filter);
-            label_Color(dateTimePickerCentura, labelCentura, cycleArazakar);
+            label_Color(dateTimePickerCentura, labelCentura, cycleTFront06);
         }
 
         private void dateTimePickerBonneManiere_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerBonneManiere, tFRONTBindingSourceBonneManiere.Filter);
-            label_Color(dateTimePickerBonneManiere, labelBonneManiere, cycleArazakar);
+            label_Color(dateTimePickerBonneManiere, labelBonneManiere, cycleTFront06);
         }
 
-        private void dateTimePickerArazakar_Validated(object sender, EventArgs e)
+        private void dateTimePickerTFront06_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerArazakar, tFRONTBindingArazakar.Filter);
-            label_Color(dateTimePickerArazakar, labelArazakar, cycleArazakar);
+            commandSQL(dateTimePickerTFront06, tFRONTBindingTFront06.Filter);
+            label_Color(dateTimePickerTFront06, labelTFront06, cycleTFront06);
         }
 
         private void dateTimePickerCVEnv_Validated(object sender, EventArgs e)
@@ -331,13 +331,13 @@ namespace TFRONT
         private void dateTimePickerSP_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerSP, tFRONTBindingSourceSP.Filter);
-            label_Color(dateTimePickerSP, labelSP, cycleArazakar);
+            label_Color(dateTimePickerSP, labelSP, cycleTFront06);
         }
 
         private void dateTimePickerHK_Validated(object sender, EventArgs e)
         {
             commandSQL(dateTimePickerHK, tFRONTBindingSourceHK.Filter);
-            label_Color(dateTimePickerHK, labelHK, cycleArazakar);
+            label_Color(dateTimePickerHK, labelHK, cycleTFront06);
         }
 
         private void buttonResetDay_Click(object sender, EventArgs e)
@@ -403,7 +403,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "0")
                     {
                         gridViewCell.Style.BackColor = Color.Orange;
-                        gridViewCell.ToolTipText = "Arazakar";
+                        gridViewCell.ToolTipText = "Spontanee";
                     }
                     else if (gridViewCell.Value.ToString() == "+")
                     {
@@ -413,7 +413,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "-")
                     {
                         gridViewCell.Style.BackColor = Color.LightBlue;
-                        gridViewCell.ToolTipText = "Réel";
+                        gridViewCell.ToolTipText = "Relance";
                     }
                     else
                     {
@@ -462,10 +462,10 @@ namespace TFRONT
             updateHourly();
         }
 
-        private void dateTimePickerReel_Validated(object sender, EventArgs e)
+        private void dateTimePickerTFront07_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerReel, tFRONTBindingSourceReel.Filter);
-            label_Color(dateTimePickerReel, labelReel, cycleReel);
+            commandSQL(dateTimePickerTFront07, tFRONTBindingSourceTFront07.Filter);
+            label_Color(dateTimePickerTFront07, labelTFront07, cycleFront07);
         }
 
 
@@ -567,15 +567,15 @@ namespace TFRONT
             updateHourly();
         }
 
-        private void dateTimePickerWebSite_Validated(object sender, EventArgs e)
+        private void dateTimePickerTFront23_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerWebSite, tFRONTbindingSourceWebsite.Filter);
-            label_Color(dateTimePickerWebSite, labelWebSite, cycleWebSite);
+            commandSQL(dateTimePickerTFront23, tFRONTbindingSourceTFront23.Filter);
+            label_Color(dateTimePickerTFront23, labelTFront23, cycleTFront23);
         }
 
-        private void arazakarMenuItem_Click(object sender, EventArgs e)
+        private void spontaneeMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyArazakar();
+            hourly.updateHourlySpontanee();
             updateHourly();
         }
 
@@ -668,10 +668,15 @@ namespace TFRONT
             }
         }
 
-        private void reelMenuItem_Click(object sender, EventArgs e)
+        private void relanceMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyReel();
-            updateHourly(); 
+            hourly.updateHourlyRelance();
+            updateHourly();
+        }
+
+        private void contextMenuStripHourly_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }
