@@ -50,6 +50,7 @@ namespace TFRONT
 
         private Counter counter = new Counter();
 
+        private NotifyIcon trayIcon;
 
         private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.LightSkyBlue, Color.Blue };
         private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Candidature", "Strategie" };
@@ -57,6 +58,18 @@ namespace TFRONT
         public Form1()
         {
             InitializeComponent();
+
+            trayIcon = new NotifyIcon()
+            {
+                Icon = new Icon("C:\\Users\\ALAIN\\Documents\\_ARAZAKAR\\Products\\02-Products\\21_AL_MYSELF\\TFRONT\\TFRONT\\Alain.ico"),
+                ContextMenuStrip = new ContextMenuStrip()
+                {
+                    Items = { new ToolStripMenuItem("Exit", null, Exit) }
+                },
+                Visible = true,
+
+            };
+            trayIcon.MouseDoubleClick += NotifyIcon1_MouseDoubleClick;
 
             hourly = new Hourly();
             front = new Front();
@@ -186,6 +199,9 @@ namespace TFRONT
             label_Color(dateTimePickerJardin, labelJD, cycleJD);
 
             label_Color(dateTimePickerTFront23, labelTFront23, cycleTFront23);
+
+            //Visible = false;
+            ShowInTaskbar = false;
 
 
         }
@@ -677,6 +693,32 @@ namespace TFRONT
         private void contextMenuStripHourly_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // Show the window when the tray icon is double-clicked
+            Show();
+            WindowState = FormWindowState.Maximized;
+            //ShowInTaskbar = true;
+        }
+
+        void Exit(object sender, EventArgs e)
+        {
+            // Hide tray icon, otherwise it will remain shown until user mouses over it
+            trayIcon.Visible = false;
+
+            Application.Exit();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Minimize to tray instead of the taskbar
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                ShowInTaskbar = false;
+            }
         }
     }
 }
