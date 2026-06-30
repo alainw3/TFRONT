@@ -698,8 +698,14 @@ namespace TFRONT
         private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             // Show the window when the tray icon is double-clicked
-            Show();
-            WindowState = FormWindowState.Maximized;
+            this.Show();
+            if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+    
+            this.Activate();
+            this.BringToFront();
             //ShowInTaskbar = true;
         }
 
