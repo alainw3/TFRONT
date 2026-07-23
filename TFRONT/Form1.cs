@@ -419,7 +419,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "0")
                     {
                         gridViewCell.Style.BackColor = Color.Orange;
-                        gridViewCell.ToolTipText = "Spontanee";
+                        gridViewCell.ToolTipText = "Arazakar";
                     }
                     else if (gridViewCell.Value.ToString() == "+")
                     {
@@ -703,7 +703,7 @@ namespace TFRONT
             {
                 WindowState = FormWindowState.Maximized;
             }
-    
+
             this.Activate();
             this.BringToFront();
             //ShowInTaskbar = true;
@@ -725,6 +725,11 @@ namespace TFRONT
                 Hide();
                 ShowInTaskbar = false;
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

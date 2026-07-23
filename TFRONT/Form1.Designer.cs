@@ -74,7 +74,7 @@
             learnToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             jobSearchToolStripMenuItem = new ToolStripMenuItem();
-            spontaneeMenuItem = new ToolStripMenuItem();
+            arazakarMenuItem = new ToolStripMenuItem();
             relanceMenuItem = new ToolStripMenuItem();
             candidatureToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
@@ -550,51 +550,51 @@
             // 
             // contextMenuStripHourly
             // 
-            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, spontaneeMenuItem, relanceMenuItem, candidatureToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, bCICToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
+            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, arazakarMenuItem, relanceMenuItem, candidatureToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, bCICToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
-            contextMenuStripHourly.Size = new Size(154, 348);
+            contextMenuStripHourly.Size = new Size(181, 370);
             contextMenuStripHourly.Opening += contextMenuStripHourly_Opening;
             // 
             // leadershipStripMenu
             // 
             leadershipStripMenu.Name = "leadershipStripMenu";
-            leadershipStripMenu.Size = new Size(153, 22);
+            leadershipStripMenu.Size = new Size(180, 22);
             leadershipStripMenu.Text = "Leadership";
             leadershipStripMenu.Click += leadershipStripMenu_Click;
             // 
             // learnToolStripMenuItem
             // 
             learnToolStripMenuItem.Name = "learnToolStripMenuItem";
-            learnToolStripMenuItem.Size = new Size(153, 22);
+            learnToolStripMenuItem.Size = new Size(180, 22);
             learnToolStripMenuItem.Text = "Learn";
             learnToolStripMenuItem.Click += learnToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(150, 6);
+            toolStripSeparator3.Size = new Size(177, 6);
             // 
             // jobSearchToolStripMenuItem
             // 
             jobSearchToolStripMenuItem.Name = "jobSearchToolStripMenuItem";
-            jobSearchToolStripMenuItem.Size = new Size(153, 22);
+            jobSearchToolStripMenuItem.Size = new Size(180, 22);
             jobSearchToolStripMenuItem.Text = "Job Search";
             jobSearchToolStripMenuItem.Click += jobSearchToolStripMenuItem_Click;
             // 
-            // spontaneeMenuItem
+            // arazakarMenuItem
             // 
-            spontaneeMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            spontaneeMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
-            spontaneeMenuItem.Name = "spontaneeMenuItem";
-            spontaneeMenuItem.Size = new Size(153, 22);
-            spontaneeMenuItem.Text = "Spontanée";
-            spontaneeMenuItem.Click += spontaneeMenuItem_Click;
+            arazakarMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            arazakarMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
+            arazakarMenuItem.Name = "arazakarMenuItem";
+            arazakarMenuItem.Size = new Size(180, 22);
+            arazakarMenuItem.Text = "Arazakar";
+            arazakarMenuItem.Click += spontaneeMenuItem_Click;
             // 
             // relanceMenuItem
             // 
             relanceMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
             relanceMenuItem.Name = "relanceMenuItem";
-            relanceMenuItem.Size = new Size(153, 22);
+            relanceMenuItem.Size = new Size(180, 22);
             relanceMenuItem.Text = "Relance";
             relanceMenuItem.Click += relanceMenuItem_Click;
             // 
@@ -603,88 +603,88 @@
             candidatureToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             candidatureToolStripMenuItem.ForeColor = Color.FromArgb(0, 192, 0);
             candidatureToolStripMenuItem.Name = "candidatureToolStripMenuItem";
-            candidatureToolStripMenuItem.Size = new Size(153, 22);
+            candidatureToolStripMenuItem.Size = new Size(180, 22);
             candidatureToolStripMenuItem.Text = "Candidature";
             candidatureToolStripMenuItem.Click += candidatureToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(150, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // administrationToolStripMenuItem1
             // 
             administrationToolStripMenuItem1.Name = "administrationToolStripMenuItem1";
-            administrationToolStripMenuItem1.Size = new Size(153, 22);
+            administrationToolStripMenuItem1.Size = new Size(180, 22);
             administrationToolStripMenuItem1.Text = "Administration";
             administrationToolStripMenuItem1.Click += administrationToolStripMenuItem1_Click;
             // 
             // financeToolStripMenuItem
             // 
             financeToolStripMenuItem.Name = "financeToolStripMenuItem";
-            financeToolStripMenuItem.Size = new Size(153, 22);
+            financeToolStripMenuItem.Size = new Size(180, 22);
             financeToolStripMenuItem.Text = "Finance";
             financeToolStripMenuItem.Click += financeToolStripMenuItem_Click;
             // 
             // StategieMenuItem
             // 
             StategieMenuItem.Name = "StategieMenuItem";
-            StategieMenuItem.Size = new Size(153, 22);
+            StategieMenuItem.Size = new Size(180, 22);
             StategieMenuItem.Text = "Strategie";
             StategieMenuItem.Click += StategieMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(150, 6);
+            toolStripSeparator4.Size = new Size(177, 6);
             // 
             // bCICToolStripMenuItem
             // 
             bCICToolStripMenuItem.Name = "bCICToolStripMenuItem";
-            bCICToolStripMenuItem.Size = new Size(153, 22);
+            bCICToolStripMenuItem.Size = new Size(180, 22);
             bCICToolStripMenuItem.Text = "BCIC";
             bCICToolStripMenuItem.Click += bCICToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(150, 6);
+            toolStripSeparator6.Size = new Size(177, 6);
             // 
             // leTempsToolStripMenuItem
             // 
             leTempsToolStripMenuItem.Name = "leTempsToolStripMenuItem";
-            leTempsToolStripMenuItem.Size = new Size(153, 22);
+            leTempsToolStripMenuItem.Size = new Size(180, 22);
             leTempsToolStripMenuItem.Text = "Le Temps";
             leTempsToolStripMenuItem.Click += leTempsToolStripMenuItem_Click;
             // 
             // madaStripMenuItem
             // 
             madaStripMenuItem.Name = "madaStripMenuItem";
-            madaStripMenuItem.Size = new Size(153, 22);
+            madaStripMenuItem.Size = new Size(180, 22);
             madaStripMenuItem.Text = "Mada";
             madaStripMenuItem.Click += madaStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(150, 6);
+            toolStripSeparator5.Size = new Size(177, 6);
             // 
             // autreToolStripMenuItem
             // 
             autreToolStripMenuItem.Name = "autreToolStripMenuItem";
-            autreToolStripMenuItem.Size = new Size(153, 22);
+            autreToolStripMenuItem.Size = new Size(180, 22);
             autreToolStripMenuItem.Text = "Autre";
             autreToolStripMenuItem.Click += autreToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(150, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // noneToolStripMenuItem
             // 
             noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            noneToolStripMenuItem.Size = new Size(153, 22);
+            noneToolStripMenuItem.Size = new Size(180, 22);
             noneToolStripMenuItem.Text = "None";
             noneToolStripMenuItem.Click += noneToolStripMenuItem_Click;
             // 
@@ -1413,6 +1413,7 @@
             menuStrip1.Size = new Size(1888, 24);
             menuStrip1.TabIndex = 19;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // menu1ToolStripMenuItem
             // 
@@ -1424,7 +1425,7 @@
             // submenu1ToolStripMenuItem
             // 
             submenu1ToolStripMenuItem.Name = "submenu1ToolStripMenuItem";
-            submenu1ToolStripMenuItem.Size = new Size(131, 22);
+            submenu1ToolStripMenuItem.Size = new Size(180, 22);
             submenu1ToolStripMenuItem.Text = "Submenu1";
             // 
             // AdminToolStripMenuItem
@@ -1613,7 +1614,7 @@
         private ToolStripMenuItem candidatureToolStripMenuItem;
         private ToolStripMenuItem StategieMenuItem;
         private BindingSource tFRONTbindingSourceTFront23;
-        private ToolStripMenuItem spontaneeMenuItem;
+        private ToolStripMenuItem arazakarMenuItem;
         private GroupBox groupBox1;
         private DateTimePicker dateTimePickerTFront23;
         private Label labelTFront23;
