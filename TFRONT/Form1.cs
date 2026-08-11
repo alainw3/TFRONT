@@ -522,6 +522,20 @@ namespace TFRONT
 
         private void buttonTLANG_Click(object sender, EventArgs e)
         {
+
+            // if buttonTLang background color is light yellow, then disable column 0 in datagridview1 and set buttonTLANG background color to default
+            if (buttonTLANG.BackColor == Color.LightYellow)
+            {
+                dataGridView1.Columns[0].ReadOnly = true;
+                dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.White;     
+                
+                // set buttonTLANG background color to default
+                buttonTLANG.BackColor = SystemColors.Control;
+            }
+
+
+
+            
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapterTLearn);
             SqlCommand sqlCommand = sqlCommandBuilder.GetUpdateCommand();
             dataAdapterTLearn.Update(dataSet11.Tables[2]);
@@ -652,6 +666,8 @@ namespace TFRONT
 
         private void buttonTBackup_Click(object sender, EventArgs e)
         {
+  
+
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapterTBackup);
             SqlCommand sqlCommand = sqlCommandBuilder.GetUpdateCommand();
             dataAdapterTBackup.Update(dataSet11.Tables[3]);
@@ -729,6 +745,21 @@ namespace TFRONT
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+
+        }
+
+        private void tLearnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Enable for modification the column colLang in datagriview1
+            dataGridView1.Columns[0].ReadOnly = false;
+
+            //Set datagridview1 column colLang background color to light yellow
+            dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.LightYellow;
+
+            //Set buttonTLANG background color to light yellow  
+            buttonTLANG.BackColor = Color.LightYellow;
+
+
 
         }
     }
