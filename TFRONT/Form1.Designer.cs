@@ -52,15 +52,15 @@
             dateTimePickerMAT = new DateTimePicker();
             tFRONTbindingSourceMAT = new BindingSource(components);
             labelMAT = new Label();
-            dateTimePickerPRO = new DateTimePicker();
-            tFRONTbindingSourcePRO = new BindingSource(components);
-            labelPRO = new Label();
             dateTimePickerMIT = new DateTimePicker();
             tFRINTbindingSourceMIT = new BindingSource(components);
             labelMIT = new Label();
             dateTimePickerLLM = new DateTimePicker();
             tFRONTBindingLLM = new BindingSource(components);
             labelLLM = new Label();
+            dateTimePickerPRO = new DateTimePicker();
+            tFRONTbindingSourcePRO = new BindingSource(components);
+            labelPRO = new Label();
             dateTimePickerTFront16 = new DateTimePicker();
             tFRONTBindingTFront16 = new BindingSource(components);
             labelTFront16 = new Label();
@@ -114,6 +114,11 @@
             administrationToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            groupBox7 = new GroupBox();
+            dateTimePickerTFront23 = new DateTimePicker();
+            labelTFront23 = new Label();
+            dateTimePickerCVEnv = new DateTimePicker();
+            labelCVEnv = new Label();
             groupBox6 = new GroupBox();
             dateTimePickerTFront06 = new DateTimePicker();
             labelCentura = new Label();
@@ -121,8 +126,6 @@
             dateTimePickerCentura = new DateTimePicker();
             labelTFront07 = new Label();
             labelTFront06 = new Label();
-            dateTimePickerCVEnv = new DateTimePicker();
-            labelCVEnv = new Label();
             labelPercentValue = new Label();
             labelPercent = new Label();
             dataGridView3 = new DataGridView();
@@ -155,8 +158,6 @@
             colSatDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             colSunDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
-            dateTimePickerTFront23 = new DateTimePicker();
-            labelTFront23 = new Label();
             labelBonneManiere = new Label();
             dateTimePickerBonneManiere = new DateTimePicker();
             labelLeaderShip = new Label();
@@ -184,9 +185,9 @@
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingSourceCertficate).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourceMAT).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourcePRO).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRINTbindingSourceMIT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingLLM).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourcePRO).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingTFront16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tLEARNBindingSource).BeginInit();
@@ -201,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingSourceJR).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTbindingStat).BeginInit();
@@ -331,7 +333,7 @@
             // 
             dateTimePickerCertificate.DataBindings.Add(new Binding("Text", tFRONTBindingSourceCertficate, "colDat", true));
             dateTimePickerCertificate.Format = DateTimePickerFormat.Short;
-            dateTimePickerCertificate.Location = new Point(104, 311);
+            dateTimePickerCertificate.Location = new Point(97, 83);
             dateTimePickerCertificate.Name = "dateTimePickerCertificate";
             dateTimePickerCertificate.Size = new Size(148, 23);
             dateTimePickerCertificate.TabIndex = 15;
@@ -348,7 +350,7 @@
             labelCertificate.AutoSize = true;
             labelCertificate.DataBindings.Add(new Binding("Text", tFRONTBindingSourceCertficate, "colSubject", true));
             labelCertificate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelCertificate.Location = new Point(15, 315);
+            labelCertificate.Location = new Point(8, 87);
             labelCertificate.Name = "labelCertificate";
             labelCertificate.Size = new Size(66, 15);
             labelCertificate.TabIndex = 14;
@@ -361,19 +363,15 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dateTimePickerCertificate);
             groupBox2.Controls.Add(dateTimePickerMAT);
-            groupBox2.Controls.Add(labelCertificate);
             groupBox2.Controls.Add(labelMAT);
-            groupBox2.Controls.Add(dateTimePickerPRO);
-            groupBox2.Controls.Add(labelPRO);
             groupBox2.Controls.Add(dateTimePickerMIT);
             groupBox2.Controls.Add(labelMIT);
             groupBox2.Controls.Add(dateTimePickerLLM);
             groupBox2.Controls.Add(labelLLM);
             groupBox2.Location = new Point(646, 24);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(259, 396);
+            groupBox2.Size = new Size(259, 168);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "AI";
@@ -382,7 +380,7 @@
             // 
             dateTimePickerMAT.DataBindings.Add(new Binding("Text", tFRONTbindingSourceMAT, "colDat", true));
             dateTimePickerMAT.Format = DateTimePickerFormat.Short;
-            dateTimePickerMAT.Location = new Point(104, 156);
+            dateTimePickerMAT.Location = new Point(104, 129);
             dateTimePickerMAT.Name = "dateTimePickerMAT";
             dateTimePickerMAT.Size = new Size(148, 23);
             dateTimePickerMAT.TabIndex = 7;
@@ -398,43 +396,17 @@
             // 
             labelMAT.AutoSize = true;
             labelMAT.DataBindings.Add(new Binding("Text", tFRONTbindingSourceMAT, "colSubject", true));
-            labelMAT.Location = new Point(15, 158);
+            labelMAT.Location = new Point(15, 131);
             labelMAT.Name = "labelMAT";
             labelMAT.Size = new Size(35, 15);
             labelMAT.TabIndex = 6;
             labelMAT.Text = "Math";
             // 
-            // dateTimePickerPRO
-            // 
-            dateTimePickerPRO.DataBindings.Add(new Binding("Text", tFRONTbindingSourcePRO, "colDat", true));
-            dateTimePickerPRO.Format = DateTimePickerFormat.Short;
-            dateTimePickerPRO.Location = new Point(104, 201);
-            dateTimePickerPRO.Name = "dateTimePickerPRO";
-            dateTimePickerPRO.Size = new Size(148, 23);
-            dateTimePickerPRO.TabIndex = 5;
-            dateTimePickerPRO.Validated += dateTimePickerPRO_Validated;
-            // 
-            // tFRONTbindingSourcePRO
-            // 
-            tFRONTbindingSourcePRO.DataMember = "TFRONT";
-            tFRONTbindingSourcePRO.DataSource = dataSet11;
-            tFRONTbindingSourcePRO.Filter = "colId='11'";
-            // 
-            // labelPRO
-            // 
-            labelPRO.AutoSize = true;
-            labelPRO.DataBindings.Add(new Binding("Text", tFRONTbindingSourcePRO, "colSubject", true));
-            labelPRO.Location = new Point(15, 204);
-            labelPRO.Name = "labelPRO";
-            labelPRO.Size = new Size(22, 15);
-            labelPRO.TabIndex = 4;
-            labelPRO.Text = "Git";
-            // 
             // dateTimePickerMIT
             // 
             dateTimePickerMIT.DataBindings.Add(new Binding("Text", tFRINTbindingSourceMIT, "colDat", true));
             dateTimePickerMIT.Format = DateTimePickerFormat.Short;
-            dateTimePickerMIT.Location = new Point(104, 107);
+            dateTimePickerMIT.Location = new Point(104, 80);
             dateTimePickerMIT.Name = "dateTimePickerMIT";
             dateTimePickerMIT.Size = new Size(148, 23);
             dateTimePickerMIT.TabIndex = 3;
@@ -450,7 +422,7 @@
             // 
             labelMIT.AutoSize = true;
             labelMIT.DataBindings.Add(new Binding("Text", tFRINTbindingSourceMIT, "colSubject", true));
-            labelMIT.Location = new Point(15, 112);
+            labelMIT.Location = new Point(15, 85);
             labelMIT.Name = "labelMIT";
             labelMIT.Size = new Size(27, 15);
             labelMIT.TabIndex = 2;
@@ -461,7 +433,7 @@
             dateTimePickerLLM.DataBindings.Add(new Binding("Text", tFRONTBindingLLM, "colDat", true));
             dateTimePickerLLM.DataBindings.Add(new Binding("Value", tFRONTBindingLLM, "colDat", true));
             dateTimePickerLLM.Format = DateTimePickerFormat.Short;
-            dateTimePickerLLM.Location = new Point(104, 54);
+            dateTimePickerLLM.Location = new Point(104, 27);
             dateTimePickerLLM.Name = "dateTimePickerLLM";
             dateTimePickerLLM.Size = new Size(148, 23);
             dateTimePickerLLM.TabIndex = 1;
@@ -478,11 +450,37 @@
             // 
             labelLLM.AutoSize = true;
             labelLLM.DataBindings.Add(new Binding("Text", tFRONTBindingLLM, "colSubject", true));
-            labelLLM.Location = new Point(15, 59);
+            labelLLM.Location = new Point(15, 32);
             labelLLM.Name = "labelLLM";
             labelLLM.Size = new Size(30, 15);
             labelLLM.TabIndex = 0;
             labelLLM.Text = "LLM";
+            // 
+            // dateTimePickerPRO
+            // 
+            dateTimePickerPRO.DataBindings.Add(new Binding("Text", tFRONTbindingSourcePRO, "colDat", true));
+            dateTimePickerPRO.Format = DateTimePickerFormat.Short;
+            dateTimePickerPRO.Location = new Point(97, 45);
+            dateTimePickerPRO.Name = "dateTimePickerPRO";
+            dateTimePickerPRO.Size = new Size(148, 23);
+            dateTimePickerPRO.TabIndex = 5;
+            dateTimePickerPRO.Validated += dateTimePickerPRO_Validated;
+            // 
+            // tFRONTbindingSourcePRO
+            // 
+            tFRONTbindingSourcePRO.DataMember = "TFRONT";
+            tFRONTbindingSourcePRO.DataSource = dataSet11;
+            tFRONTbindingSourcePRO.Filter = "colId='11'";
+            // 
+            // labelPRO
+            // 
+            labelPRO.AutoSize = true;
+            labelPRO.DataBindings.Add(new Binding("Text", tFRONTbindingSourcePRO, "colSubject", true));
+            labelPRO.Location = new Point(8, 48);
+            labelPRO.Name = "labelPRO";
+            labelPRO.Size = new Size(22, 15);
+            labelPRO.TabIndex = 4;
+            labelPRO.Text = "Git";
             // 
             // dateTimePickerTFront16
             // 
@@ -900,6 +898,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(groupBox7);
             tabPage1.Controls.Add(groupBox6);
             tabPage1.Controls.Add(labelPercentValue);
             tabPage1.Controls.Add(labelPercent);
@@ -933,6 +932,66 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            groupBox7.Controls.Add(dateTimePickerTFront23);
+            groupBox7.Controls.Add(dateTimePickerCertificate);
+            groupBox7.Controls.Add(labelTFront23);
+            groupBox7.Controls.Add(labelPRO);
+            groupBox7.Controls.Add(dateTimePickerPRO);
+            groupBox7.Controls.Add(labelCertificate);
+            groupBox7.Controls.Add(dateTimePickerCVEnv);
+            groupBox7.Controls.Add(labelCVEnv);
+            groupBox7.ForeColor = Color.Blue;
+            groupBox7.Location = new Point(654, 205);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(251, 223);
+            groupBox7.TabIndex = 28;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "Preuve";
+            // 
+            // dateTimePickerTFront23
+            // 
+            dateTimePickerTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colDat", true));
+            dateTimePickerTFront23.Format = DateTimePickerFormat.Short;
+            dateTimePickerTFront23.Location = new Point(97, 123);
+            dateTimePickerTFront23.Name = "dateTimePickerTFront23";
+            dateTimePickerTFront23.Size = new Size(148, 23);
+            dateTimePickerTFront23.TabIndex = 19;
+            dateTimePickerTFront23.Validated += dateTimePickerTFront23_Validated;
+            // 
+            // labelTFront23
+            // 
+            labelTFront23.AutoSize = true;
+            labelTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colSubject", true));
+            labelTFront23.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelTFront23.Location = new Point(8, 124);
+            labelTFront23.Name = "labelTFront23";
+            labelTFront23.Size = new Size(58, 15);
+            labelTFront23.TabIndex = 18;
+            labelTFront23.Text = "TFront23";
+            // 
+            // dateTimePickerCVEnv
+            // 
+            dateTimePickerCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colDat", true));
+            dateTimePickerCVEnv.Format = DateTimePickerFormat.Short;
+            dateTimePickerCVEnv.Location = new Point(97, 163);
+            dateTimePickerCVEnv.Name = "dateTimePickerCVEnv";
+            dateTimePickerCVEnv.Size = new Size(148, 23);
+            dateTimePickerCVEnv.TabIndex = 12;
+            dateTimePickerCVEnv.Validated += dateTimePickerCVEnv_Validated;
+            // 
+            // labelCVEnv
+            // 
+            labelCVEnv.AutoSize = true;
+            labelCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colSubject", true));
+            labelCVEnv.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelCVEnv.Location = new Point(8, 170);
+            labelCVEnv.Name = "labelCVEnv";
+            labelCVEnv.Size = new Size(74, 15);
+            labelCVEnv.TabIndex = 11;
+            labelCVEnv.Text = "Candidature";
+            // 
             // groupBox6
             // 
             groupBox6.Controls.Add(dateTimePickerTFront06);
@@ -941,8 +1000,6 @@
             groupBox6.Controls.Add(dateTimePickerCentura);
             groupBox6.Controls.Add(labelTFront07);
             groupBox6.Controls.Add(labelTFront06);
-            groupBox6.Controls.Add(dateTimePickerCVEnv);
-            groupBox6.Controls.Add(labelCVEnv);
             groupBox6.Location = new Point(263, 222);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(334, 198);
@@ -1012,27 +1069,6 @@
             labelTFront06.Size = new Size(58, 15);
             labelTFront06.TabIndex = 9;
             labelTFront06.Text = "TFront06";
-            // 
-            // dateTimePickerCVEnv
-            // 
-            dateTimePickerCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colDat", true));
-            dateTimePickerCVEnv.Format = DateTimePickerFormat.Short;
-            dateTimePickerCVEnv.Location = new Point(145, 112);
-            dateTimePickerCVEnv.Name = "dateTimePickerCVEnv";
-            dateTimePickerCVEnv.Size = new Size(131, 23);
-            dateTimePickerCVEnv.TabIndex = 12;
-            dateTimePickerCVEnv.Validated += dateTimePickerCVEnv_Validated;
-            // 
-            // labelCVEnv
-            // 
-            labelCVEnv.AutoSize = true;
-            labelCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colSubject", true));
-            labelCVEnv.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelCVEnv.Location = new Point(13, 112);
-            labelCVEnv.Name = "labelCVEnv";
-            labelCVEnv.Size = new Size(74, 15);
-            labelCVEnv.TabIndex = 11;
-            labelCVEnv.Text = "Candidature";
             // 
             // labelPercentValue
             // 
@@ -1313,8 +1349,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dateTimePickerTFront23);
-            groupBox1.Controls.Add(labelTFront23);
             groupBox1.Controls.Add(labelBonneManiere);
             groupBox1.Controls.Add(dateTimePickerBonneManiere);
             groupBox1.Controls.Add(labelLeaderShip);
@@ -1325,27 +1359,6 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Me";
-            // 
-            // dateTimePickerTFront23
-            // 
-            dateTimePickerTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colDat", true));
-            dateTimePickerTFront23.Format = DateTimePickerFormat.Short;
-            dateTimePickerTFront23.Location = new Point(148, 129);
-            dateTimePickerTFront23.Name = "dateTimePickerTFront23";
-            dateTimePickerTFront23.Size = new Size(131, 23);
-            dateTimePickerTFront23.TabIndex = 19;
-            dateTimePickerTFront23.Validated += dateTimePickerTFront23_Validated;
-            // 
-            // labelTFront23
-            // 
-            labelTFront23.AutoSize = true;
-            labelTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colSubject", true));
-            labelTFront23.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelTFront23.Location = new Point(15, 130);
-            labelTFront23.Name = "labelTFront23";
-            labelTFront23.Size = new Size(58, 15);
-            labelTFront23.TabIndex = 18;
-            labelTFront23.Text = "TFront23";
             // 
             // labelBonneManiere
             // 
@@ -1439,14 +1452,14 @@
             // backupToolStripMenuItem
             // 
             backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            backupToolStripMenuItem.Size = new Size(180, 22);
+            backupToolStripMenuItem.Size = new Size(113, 22);
             backupToolStripMenuItem.Text = "Backup";
             backupToolStripMenuItem.Click += backupToolStripMenuItem_Click;
             // 
             // tLearnToolStripMenuItem
             // 
             tLearnToolStripMenuItem.Name = "tLearnToolStripMenuItem";
-            tLearnToolStripMenuItem.Size = new Size(180, 22);
+            tLearnToolStripMenuItem.Size = new Size(113, 22);
             tLearnToolStripMenuItem.Text = "TLearn";
             tLearnToolStripMenuItem.Click += tLearnToolStripMenuItem_Click;
             // 
@@ -1478,9 +1491,9 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourceMAT).EndInit();
-            ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourcePRO).EndInit();
             ((System.ComponentModel.ISupportInitialize)tFRINTbindingSourceMIT).EndInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingLLM).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tFRONTbindingSourcePRO).EndInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingTFront16).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)tLEARNBindingSource).EndInit();
@@ -1498,6 +1511,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
@@ -1662,5 +1677,6 @@
         private GroupBox groupBox6;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripMenuItem tLearnToolStripMenuItem;
+        private GroupBox groupBox7;
     }
 }
