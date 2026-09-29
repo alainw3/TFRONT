@@ -52,8 +52,8 @@ namespace TFRONT
 
         private NotifyIcon trayIcon;
 
-        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.LightSkyBlue, Color.Blue };
-        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Candidature", "Strategie" };
+        private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.Orange, Color.Blue };
+        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Relation", "Strategie" };
 
         public Form1()
         {
@@ -418,8 +418,8 @@ namespace TFRONT
                     }
                     else if (gridViewCell.Value.ToString() == "0")
                     {
-                        gridViewCell.Style.BackColor = Color.Orange;
-                        gridViewCell.ToolTipText = "Arazakar";
+                        gridViewCell.Style.BackColor = Color.LightBlue;
+                        gridViewCell.ToolTipText ="Candidature";
                     }
                     else if (gridViewCell.Value.ToString() == "+")
                     {
@@ -429,7 +429,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "-")
                     {
                         gridViewCell.Style.BackColor = Color.LightBlue;
-                        gridViewCell.ToolTipText = "Relance";
+                        gridViewCell.ToolTipText = "Campus";
                     }
                     else
                     {
@@ -585,9 +585,9 @@ namespace TFRONT
             label_Color(dateTimePickerJardin, labelJD, cycleJD);
         }
 
-        private void candidatureToolStripMenuItem_Click(object sender, EventArgs e)
+        private void relationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyCandidature();
+            hourly.updateHourlyRelation();
             updateHourly();
         }
 
@@ -603,9 +603,9 @@ namespace TFRONT
             label_Color(dateTimePickerTFront23, labelTFront23, cycleTFront23);
         }
 
-        private void spontaneeMenuItem_Click(object sender, EventArgs e)
+        private void candidatureMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlySpontanee();
+            hourly.updateHourlyCandidature();
             updateHourly();
         }
 
@@ -700,9 +700,9 @@ namespace TFRONT
             }
         }
 
-        private void relanceMenuItem_Click(object sender, EventArgs e)
+        private void campusMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyRelance();
+            hourly.updateHourlyCampus();
             updateHourly();
         }
 

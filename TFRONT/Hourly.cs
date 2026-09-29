@@ -91,7 +91,7 @@ namespace TFRONT
             sQL.updateHourly(dayID, "7", hourID);
         }
 
-        public void updateHourlyCandidature()
+        public void updateHourlyRelation()
         { 
             sQL.updateHourly(dayID, "8", hourID);
         }
@@ -103,7 +103,7 @@ namespace TFRONT
         }
 
 
-        public void updateHourlySpontanee()
+        public void updateHourlyCandidature()
         {
             sQL.updateHourly(dayID, "0", hourID);
         }
@@ -114,7 +114,7 @@ namespace TFRONT
             sQL.updateHourly(dayID, "+", hourID);
         }
 
-        public void updateHourlyRelance()
+        public void updateHourlyCampus()
         {
             sQL.updateHourly(dayID, "-", hourID);
         }

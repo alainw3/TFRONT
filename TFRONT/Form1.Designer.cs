@@ -72,11 +72,11 @@
             contextMenuStripHourly = new ContextMenuStrip(components);
             leadershipStripMenu = new ToolStripMenuItem();
             learnToolStripMenuItem = new ToolStripMenuItem();
+            campusMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             jobSearchToolStripMenuItem = new ToolStripMenuItem();
-            arazakarMenuItem = new ToolStripMenuItem();
-            relanceMenuItem = new ToolStripMenuItem();
-            candidatureToolStripMenuItem = new ToolStripMenuItem();
+            candidatureMenuItem = new ToolStripMenuItem();
+            relationToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             administrationToolStripMenuItem1 = new ToolStripMenuItem();
             financeToolStripMenuItem = new ToolStripMenuItem();
@@ -115,8 +115,6 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             groupBox7 = new GroupBox();
-            dateTimePickerTFront23 = new DateTimePicker();
-            labelTFront23 = new Label();
             dateTimePickerCVEnv = new DateTimePicker();
             labelCVEnv = new Label();
             groupBox6 = new GroupBox();
@@ -158,7 +156,9 @@
             colSatDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             colSunDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            dateTimePickerTFront23 = new DateTimePicker();
             labelBonneManiere = new Label();
+            labelTFront23 = new Label();
             dateTimePickerBonneManiere = new DateTimePicker();
             labelLeaderShip = new Label();
             dateTimePickerLeadership = new DateTimePicker();
@@ -549,7 +549,7 @@
             // 
             // contextMenuStripHourly
             // 
-            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, arazakarMenuItem, relanceMenuItem, candidatureToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, bCICToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
+            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, campusMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, candidatureMenuItem, relationToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, bCICToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
             contextMenuStripHourly.Size = new Size(154, 348);
             contextMenuStripHourly.Opening += contextMenuStripHourly_Opening;
@@ -568,6 +568,14 @@
             learnToolStripMenuItem.Text = "Learn";
             learnToolStripMenuItem.Click += learnToolStripMenuItem_Click;
             // 
+            // campusMenuItem
+            // 
+            campusMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
+            campusMenuItem.Name = "campusMenuItem";
+            campusMenuItem.Size = new Size(153, 22);
+            campusMenuItem.Text = "Campus";
+            campusMenuItem.Click += campusMenuItem_Click;
+            // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
@@ -580,31 +588,23 @@
             jobSearchToolStripMenuItem.Text = "Job Search";
             jobSearchToolStripMenuItem.Click += jobSearchToolStripMenuItem_Click;
             // 
-            // arazakarMenuItem
+            // candidatureMenuItem
             // 
-            arazakarMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            arazakarMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
-            arazakarMenuItem.Name = "arazakarMenuItem";
-            arazakarMenuItem.Size = new Size(153, 22);
-            arazakarMenuItem.Text = "Arazakar";
-            arazakarMenuItem.Click += spontaneeMenuItem_Click;
+            candidatureMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            candidatureMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
+            candidatureMenuItem.Name = "candidatureMenuItem";
+            candidatureMenuItem.Size = new Size(153, 22);
+            candidatureMenuItem.Text = "Candidature";
+            candidatureMenuItem.Click += candidatureMenuItem_Click;
             // 
-            // relanceMenuItem
+            // relationToolStripMenuItem
             // 
-            relanceMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
-            relanceMenuItem.Name = "relanceMenuItem";
-            relanceMenuItem.Size = new Size(153, 22);
-            relanceMenuItem.Text = "Relance";
-            relanceMenuItem.Click += relanceMenuItem_Click;
-            // 
-            // candidatureToolStripMenuItem
-            // 
-            candidatureToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            candidatureToolStripMenuItem.ForeColor = Color.FromArgb(0, 192, 0);
-            candidatureToolStripMenuItem.Name = "candidatureToolStripMenuItem";
-            candidatureToolStripMenuItem.Size = new Size(153, 22);
-            candidatureToolStripMenuItem.Text = "Candidature";
-            candidatureToolStripMenuItem.Click += candidatureToolStripMenuItem_Click;
+            relationToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            relationToolStripMenuItem.ForeColor = Color.FromArgb(0, 192, 0);
+            relationToolStripMenuItem.Name = "relationToolStripMenuItem";
+            relationToolStripMenuItem.Size = new Size(153, 22);
+            relationToolStripMenuItem.Text = "Relation";
+            relationToolStripMenuItem.Click += relationToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
@@ -934,48 +934,25 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(dateTimePickerTFront23);
             groupBox7.Controls.Add(dateTimePickerCertificate);
-            groupBox7.Controls.Add(labelTFront23);
             groupBox7.Controls.Add(labelPRO);
             groupBox7.Controls.Add(dateTimePickerPRO);
             groupBox7.Controls.Add(labelCertificate);
             groupBox7.Controls.Add(dateTimePickerCVEnv);
             groupBox7.Controls.Add(labelCVEnv);
             groupBox7.ForeColor = Color.Blue;
-            groupBox7.Location = new Point(654, 205);
+            groupBox7.Location = new Point(648, 205);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(251, 223);
+            groupBox7.Size = new Size(257, 189);
             groupBox7.TabIndex = 28;
             groupBox7.TabStop = false;
             groupBox7.Text = "Preuve";
-            // 
-            // dateTimePickerTFront23
-            // 
-            dateTimePickerTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colDat", true));
-            dateTimePickerTFront23.Format = DateTimePickerFormat.Short;
-            dateTimePickerTFront23.Location = new Point(97, 123);
-            dateTimePickerTFront23.Name = "dateTimePickerTFront23";
-            dateTimePickerTFront23.Size = new Size(148, 23);
-            dateTimePickerTFront23.TabIndex = 19;
-            dateTimePickerTFront23.Validated += dateTimePickerTFront23_Validated;
-            // 
-            // labelTFront23
-            // 
-            labelTFront23.AutoSize = true;
-            labelTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colSubject", true));
-            labelTFront23.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelTFront23.Location = new Point(8, 124);
-            labelTFront23.Name = "labelTFront23";
-            labelTFront23.Size = new Size(58, 15);
-            labelTFront23.TabIndex = 18;
-            labelTFront23.Text = "TFront23";
             // 
             // dateTimePickerCVEnv
             // 
             dateTimePickerCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colDat", true));
             dateTimePickerCVEnv.Format = DateTimePickerFormat.Short;
-            dateTimePickerCVEnv.Location = new Point(97, 163);
+            dateTimePickerCVEnv.Location = new Point(97, 143);
             dateTimePickerCVEnv.Name = "dateTimePickerCVEnv";
             dateTimePickerCVEnv.Size = new Size(148, 23);
             dateTimePickerCVEnv.TabIndex = 12;
@@ -986,7 +963,7 @@
             labelCVEnv.AutoSize = true;
             labelCVEnv.DataBindings.Add(new Binding("Text", tFRONTBindingCVEnv, "colSubject", true));
             labelCVEnv.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelCVEnv.Location = new Point(8, 170);
+            labelCVEnv.Location = new Point(8, 150);
             labelCVEnv.Name = "labelCVEnv";
             labelCVEnv.Size = new Size(74, 15);
             labelCVEnv.TabIndex = 11;
@@ -1002,7 +979,7 @@
             groupBox6.Controls.Add(labelTFront06);
             groupBox6.Location = new Point(263, 222);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(334, 198);
+            groupBox6.Size = new Size(334, 154);
             groupBox6.TabIndex = 27;
             groupBox6.TabStop = false;
             groupBox6.Text = "Job Search";
@@ -1032,7 +1009,7 @@
             // 
             dateTimePickerTFront07.DataBindings.Add(new Binding("Text", tFRONTBindingSourceTFront07, "colDat", true));
             dateTimePickerTFront07.Format = DateTimePickerFormat.Short;
-            dateTimePickerTFront07.Location = new Point(145, 154);
+            dateTimePickerTFront07.Location = new Point(145, 118);
             dateTimePickerTFront07.Name = "dateTimePickerTFront07";
             dateTimePickerTFront07.Size = new Size(131, 23);
             dateTimePickerTFront07.TabIndex = 17;
@@ -1053,7 +1030,7 @@
             labelTFront07.AutoSize = true;
             labelTFront07.DataBindings.Add(new Binding("Text", tFRONTBindingSourceTFront07, "colSubject", true));
             labelTFront07.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelTFront07.Location = new Point(13, 158);
+            labelTFront07.Location = new Point(13, 122);
             labelTFront07.Name = "labelTFront07";
             labelTFront07.Size = new Size(58, 15);
             labelTFront07.TabIndex = 16;
@@ -1184,9 +1161,9 @@
             groupBox5.Controls.Add(dateTimePickerVilla);
             groupBox5.Controls.Add(labelJD);
             groupBox5.Controls.Add(labelVL);
-            groupBox5.Location = new Point(645, 593);
+            groupBox5.Location = new Point(648, 593);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(260, 162);
+            groupBox5.Size = new Size(260, 125);
             groupBox5.TabIndex = 21;
             groupBox5.TabStop = false;
             groupBox5.Text = "Maison";
@@ -1349,7 +1326,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dateTimePickerTFront23);
             groupBox1.Controls.Add(labelBonneManiere);
+            groupBox1.Controls.Add(labelTFront23);
             groupBox1.Controls.Add(dateTimePickerBonneManiere);
             groupBox1.Controls.Add(labelLeaderShip);
             groupBox1.Controls.Add(dateTimePickerLeadership);
@@ -1359,6 +1338,16 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Me";
+            // 
+            // dateTimePickerTFront23
+            // 
+            dateTimePickerTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colDat", true));
+            dateTimePickerTFront23.Format = DateTimePickerFormat.Short;
+            dateTimePickerTFront23.Location = new Point(151, 127);
+            dateTimePickerTFront23.Name = "dateTimePickerTFront23";
+            dateTimePickerTFront23.Size = new Size(128, 23);
+            dateTimePickerTFront23.TabIndex = 19;
+            dateTimePickerTFront23.Validated += dateTimePickerTFront23_Validated;
             // 
             // labelBonneManiere
             // 
@@ -1371,11 +1360,22 @@
             labelBonneManiere.TabIndex = 6;
             labelBonneManiere.Text = "Bonne Manière";
             // 
+            // labelTFront23
+            // 
+            labelTFront23.AutoSize = true;
+            labelTFront23.DataBindings.Add(new Binding("Text", tFRONTbindingSourceTFront23, "colSubject", true));
+            labelTFront23.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelTFront23.Location = new Point(15, 128);
+            labelTFront23.Name = "labelTFront23";
+            labelTFront23.Size = new Size(58, 15);
+            labelTFront23.TabIndex = 18;
+            labelTFront23.Text = "TFront23";
+            // 
             // dateTimePickerBonneManiere
             // 
             dateTimePickerBonneManiere.DataBindings.Add(new Binding("Text", tFRONTBindingSourceBonneManiere, "colDat", true));
             dateTimePickerBonneManiere.Format = DateTimePickerFormat.Short;
-            dateTimePickerBonneManiere.Location = new Point(148, 79);
+            dateTimePickerBonneManiere.Location = new Point(151, 79);
             dateTimePickerBonneManiere.Name = "dateTimePickerBonneManiere";
             dateTimePickerBonneManiere.Size = new Size(131, 23);
             dateTimePickerBonneManiere.TabIndex = 7;
@@ -1634,10 +1634,10 @@
         private Label labelJD;
         private BindingSource tFRONTBindingVilla;
         private BindingSource tFRONTBindingJardin;
-        private ToolStripMenuItem candidatureToolStripMenuItem;
+        private ToolStripMenuItem relationToolStripMenuItem;
         private ToolStripMenuItem StategieMenuItem;
         private BindingSource tFRONTbindingSourceTFront23;
-        private ToolStripMenuItem arazakarMenuItem;
+        private ToolStripMenuItem candidatureMenuItem;
         private GroupBox groupBox1;
         private DateTimePicker dateTimePickerTFront23;
         private Label labelTFront23;
@@ -1673,7 +1673,7 @@
         private ToolStripMenuItem backupToolStripMenuItem;
         private Label labelPercentValue;
         private Label labelPercent;
-        private ToolStripMenuItem relanceMenuItem;
+        private ToolStripMenuItem campusMenuItem;
         private GroupBox groupBox6;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripMenuItem tLearnToolStripMenuItem;
