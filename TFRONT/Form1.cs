@@ -53,7 +53,7 @@ namespace TFRONT
         private NotifyIcon trayIcon;
 
         private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.Orange, Color.Blue };
-        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "BCIC", "Mada", "Relation", "Strategie" };
+        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "Work", "Mada", "Relation", "Strategie" };
 
         public Form1()
         {
@@ -541,9 +541,9 @@ namespace TFRONT
             dataAdapterTLearn.Update(dataSet11.Tables[2]);
         }
 
-        private void bCICToolStripMenuItem_Click(object sender, EventArgs e)
+        private void workToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyBCIC();
+            hourly.updateHourlyWork();
             updateHourly();
         }
 

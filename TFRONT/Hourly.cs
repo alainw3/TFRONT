@@ -80,7 +80,7 @@ namespace TFRONT
             sQL.updateHourly(dayID, "4", hourID);
 
         }
-        public void updateHourlyBCIC()
+        public void updateHourlyWork()
         {
             sQL.updateHourly(dayID, "6", hourID);
         }
