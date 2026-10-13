@@ -526,7 +526,12 @@ namespace TFRONT
             // if buttonTLang background color is light yellow, then disable column 0 in datagridview1 and set buttonTLANG background color to default
             if (buttonTLANG.BackColor == Color.LightYellow)
             {
+
                 dataGridView1.Columns[0].ReadOnly = true;
+
+                //desactivate deleting for datagridview1 rows
+                dataGridView1.AllowUserToDeleteRows = false;
+
                 dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.White;     
                 
                 // set buttonTLANG background color to default
@@ -752,6 +757,9 @@ namespace TFRONT
         {
             //Enable for modification the column colLang in datagriview1
             dataGridView1.Columns[0].ReadOnly = false;
+
+            //Enble deleting for datagridview1 rows
+            dataGridView1.AllowUserToDeleteRows = true;
 
             //Set datagridview1 column colLang background color to light yellow
             dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.LightYellow;
