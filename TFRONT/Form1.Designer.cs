@@ -114,6 +114,11 @@
             administrationToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            dataGridView4 = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
+            tITBindingSource = new BindingSource(components);
             groupBox7 = new GroupBox();
             dateTimePickerCVEnv = new DateTimePicker();
             labelCVEnv = new Label();
@@ -202,6 +207,8 @@
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingSourceJR).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tITBindingSource).BeginInit();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -369,7 +376,7 @@
             groupBox2.Controls.Add(labelMIT);
             groupBox2.Controls.Add(dateTimePickerLLM);
             groupBox2.Controls.Add(labelLLM);
-            groupBox2.Location = new Point(646, 24);
+            groupBox2.Location = new Point(642, 485);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(259, 168);
             groupBox2.TabIndex = 9;
@@ -516,9 +523,9 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colLangDataGridViewTextBoxColumn, colDatDataGridViewTextBoxColumn, Refresh });
             dataGridView1.DataSource = tLEARNBindingSource;
-            dataGridView1.Location = new Point(925, 64);
+            dataGridView1.Location = new Point(953, 52);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(352, 430);
+            dataGridView1.Size = new Size(352, 380);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellPainting += dataGridView1_CellPainting;
@@ -546,25 +553,27 @@
             // 
             tLEARNBindingSource.DataMember = "TLEARN";
             tLEARNBindingSource.DataSource = dataSet11;
+            tLEARNBindingSource.Filter = "colId < 50";
+            tLEARNBindingSource.CurrentChanged += tLEARNBindingSource_CurrentChanged;
             // 
             // contextMenuStripHourly
             // 
             contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, learnToolStripMenuItem, campusMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, candidatureMenuItem, relationToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, workToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autreToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
-            contextMenuStripHourly.Size = new Size(181, 370);
+            contextMenuStripHourly.Size = new Size(154, 348);
             contextMenuStripHourly.Opening += contextMenuStripHourly_Opening;
             // 
             // leadershipStripMenu
             // 
             leadershipStripMenu.Name = "leadershipStripMenu";
-            leadershipStripMenu.Size = new Size(180, 22);
+            leadershipStripMenu.Size = new Size(153, 22);
             leadershipStripMenu.Text = "Leadership";
             leadershipStripMenu.Click += leadershipStripMenu_Click;
             // 
             // learnToolStripMenuItem
             // 
             learnToolStripMenuItem.Name = "learnToolStripMenuItem";
-            learnToolStripMenuItem.Size = new Size(180, 22);
+            learnToolStripMenuItem.Size = new Size(153, 22);
             learnToolStripMenuItem.Text = "Learn";
             learnToolStripMenuItem.Click += learnToolStripMenuItem_Click;
             // 
@@ -572,19 +581,19 @@
             // 
             campusMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
             campusMenuItem.Name = "campusMenuItem";
-            campusMenuItem.Size = new Size(180, 22);
+            campusMenuItem.Size = new Size(153, 22);
             campusMenuItem.Text = "Campus";
             campusMenuItem.Click += campusMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(150, 6);
             // 
             // jobSearchToolStripMenuItem
             // 
             jobSearchToolStripMenuItem.Name = "jobSearchToolStripMenuItem";
-            jobSearchToolStripMenuItem.Size = new Size(180, 22);
+            jobSearchToolStripMenuItem.Size = new Size(153, 22);
             jobSearchToolStripMenuItem.Text = "Job Search";
             jobSearchToolStripMenuItem.Click += jobSearchToolStripMenuItem_Click;
             // 
@@ -593,7 +602,7 @@
             candidatureMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             candidatureMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
             candidatureMenuItem.Name = "candidatureMenuItem";
-            candidatureMenuItem.Size = new Size(180, 22);
+            candidatureMenuItem.Size = new Size(153, 22);
             candidatureMenuItem.Text = "Candidature";
             candidatureMenuItem.Click += candidatureMenuItem_Click;
             // 
@@ -602,88 +611,88 @@
             relationToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             relationToolStripMenuItem.ForeColor = Color.FromArgb(0, 192, 0);
             relationToolStripMenuItem.Name = "relationToolStripMenuItem";
-            relationToolStripMenuItem.Size = new Size(180, 22);
+            relationToolStripMenuItem.Size = new Size(153, 22);
             relationToolStripMenuItem.Text = "Relation";
             relationToolStripMenuItem.Click += relationToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(150, 6);
             // 
             // administrationToolStripMenuItem1
             // 
             administrationToolStripMenuItem1.Name = "administrationToolStripMenuItem1";
-            administrationToolStripMenuItem1.Size = new Size(180, 22);
+            administrationToolStripMenuItem1.Size = new Size(153, 22);
             administrationToolStripMenuItem1.Text = "Administration";
             administrationToolStripMenuItem1.Click += administrationToolStripMenuItem1_Click;
             // 
             // financeToolStripMenuItem
             // 
             financeToolStripMenuItem.Name = "financeToolStripMenuItem";
-            financeToolStripMenuItem.Size = new Size(180, 22);
+            financeToolStripMenuItem.Size = new Size(153, 22);
             financeToolStripMenuItem.Text = "Finance";
             financeToolStripMenuItem.Click += financeToolStripMenuItem_Click;
             // 
             // StategieMenuItem
             // 
             StategieMenuItem.Name = "StategieMenuItem";
-            StategieMenuItem.Size = new Size(180, 22);
+            StategieMenuItem.Size = new Size(153, 22);
             StategieMenuItem.Text = "Strategie";
             StategieMenuItem.Click += StategieMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(150, 6);
             // 
             // workToolStripMenuItem
             // 
             workToolStripMenuItem.Name = "workToolStripMenuItem";
-            workToolStripMenuItem.Size = new Size(180, 22);
+            workToolStripMenuItem.Size = new Size(153, 22);
             workToolStripMenuItem.Text = "Work";
             workToolStripMenuItem.Click += workToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(177, 6);
+            toolStripSeparator6.Size = new Size(150, 6);
             // 
             // leTempsToolStripMenuItem
             // 
             leTempsToolStripMenuItem.Name = "leTempsToolStripMenuItem";
-            leTempsToolStripMenuItem.Size = new Size(180, 22);
+            leTempsToolStripMenuItem.Size = new Size(153, 22);
             leTempsToolStripMenuItem.Text = "Le Temps";
             leTempsToolStripMenuItem.Click += leTempsToolStripMenuItem_Click;
             // 
             // madaStripMenuItem
             // 
             madaStripMenuItem.Name = "madaStripMenuItem";
-            madaStripMenuItem.Size = new Size(180, 22);
+            madaStripMenuItem.Size = new Size(153, 22);
             madaStripMenuItem.Text = "Mada";
             madaStripMenuItem.Click += madaStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(177, 6);
+            toolStripSeparator5.Size = new Size(150, 6);
             // 
             // autreToolStripMenuItem
             // 
             autreToolStripMenuItem.Name = "autreToolStripMenuItem";
-            autreToolStripMenuItem.Size = new Size(180, 22);
+            autreToolStripMenuItem.Size = new Size(153, 22);
             autreToolStripMenuItem.Text = "Autre";
             autreToolStripMenuItem.Click += autreToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(150, 6);
             // 
             // noneToolStripMenuItem
             // 
             noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            noneToolStripMenuItem.Size = new Size(180, 22);
+            noneToolStripMenuItem.Size = new Size(153, 22);
             noneToolStripMenuItem.Text = "None";
             noneToolStripMenuItem.Click += noneToolStripMenuItem_Click;
             // 
@@ -784,7 +793,7 @@
             groupBox4.Controls.Add(labelMiremont);
             groupBox4.Controls.Add(dateTimePickerMada);
             groupBox4.Controls.Add(labelMada);
-            groupBox4.Location = new Point(646, 435);
+            groupBox4.Location = new Point(0, 327);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(259, 137);
             groupBox4.TabIndex = 13;
@@ -898,6 +907,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dataGridView4);
             tabPage1.Controls.Add(groupBox7);
             tabPage1.Controls.Add(groupBox6);
             tabPage1.Controls.Add(labelPercentValue);
@@ -932,6 +942,45 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView4
+            // 
+            dataGridView4.AllowUserToAddRows = false;
+            dataGridView4.AllowUserToDeleteRows = false;
+            dataGridView4.AutoGenerateColumns = false;
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewButtonColumn1 });
+            dataGridView4.DataSource = tITBindingSource;
+            dataGridView4.Location = new Point(613, 52);
+            dataGridView4.Name = "dataGridView4";
+            dataGridView4.Size = new Size(334, 380);
+            dataGridView4.TabIndex = 29;
+            dataGridView4.CellFormatting += dataGridView4_CellFormatting;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "colLang";
+            dataGridViewTextBoxColumn1.HeaderText = "colLang";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "colDat";
+            dataGridViewTextBoxColumn2.HeaderText = "colDat";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            dataGridViewButtonColumn1.HeaderText = "Refresh";
+            dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            dataGridViewButtonColumn1.Text = "hhhh";
+            // 
+            // tITBindingSource
+            // 
+            tITBindingSource.DataMember = "TLEARN";
+            tITBindingSource.DataSource = dataSet11;
+            tITBindingSource.Filter = "colId > 50";
+            // 
             // groupBox7
             // 
             groupBox7.Controls.Add(dateTimePickerCertificate);
@@ -941,7 +990,7 @@
             groupBox7.Controls.Add(dateTimePickerCVEnv);
             groupBox7.Controls.Add(labelCVEnv);
             groupBox7.ForeColor = Color.Blue;
-            groupBox7.Location = new Point(648, 205);
+            groupBox7.Location = new Point(644, 666);
             groupBox7.Name = "groupBox7";
             groupBox7.Size = new Size(257, 189);
             groupBox7.TabIndex = 28;
@@ -1051,7 +1100,7 @@
             // 
             labelPercentValue.AutoSize = true;
             labelPercentValue.Font = new Font("Segoe UI", 30F);
-            labelPercentValue.Location = new Point(712, 802);
+            labelPercentValue.Location = new Point(712, 927);
             labelPercentValue.Name = "labelPercentValue";
             labelPercentValue.Size = new Size(111, 54);
             labelPercentValue.TabIndex = 26;
@@ -1062,7 +1111,7 @@
             // 
             labelPercent.AutoSize = true;
             labelPercent.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            labelPercent.Location = new Point(691, 777);
+            labelPercent.Location = new Point(691, 902);
             labelPercent.Name = "labelPercent";
             labelPercent.Size = new Size(148, 25);
             labelPercent.TabIndex = 25;
@@ -1161,7 +1210,7 @@
             groupBox5.Controls.Add(dateTimePickerVilla);
             groupBox5.Controls.Add(labelJD);
             groupBox5.Controls.Add(labelVL);
-            groupBox5.Location = new Point(648, 593);
+            groupBox5.Location = new Point(2, 485);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(260, 125);
             groupBox5.TabIndex = 21;
@@ -1232,7 +1281,7 @@
             // 
             // buttonTLANG
             // 
-            buttonTLANG.Location = new Point(1007, 500);
+            buttonTLANG.Location = new Point(1017, 450);
             buttonTLANG.Name = "buttonTLANG";
             buttonTLANG.Size = new Size(181, 23);
             buttonTLANG.TabIndex = 19;
@@ -1439,7 +1488,7 @@
             // submenu1ToolStripMenuItem
             // 
             submenu1ToolStripMenuItem.Name = "submenu1ToolStripMenuItem";
-            submenu1ToolStripMenuItem.Size = new Size(180, 22);
+            submenu1ToolStripMenuItem.Size = new Size(131, 22);
             submenu1ToolStripMenuItem.Text = "Submenu1";
             // 
             // AdminToolStripMenuItem
@@ -1511,6 +1560,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tITBindingSource).EndInit();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
             groupBox6.ResumeLayout(false);
@@ -1678,5 +1729,10 @@
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripMenuItem tLearnToolStripMenuItem;
         private GroupBox groupBox7;
+        private DataGridView dataGridView4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private BindingSource tITBindingSource;
     }
 }

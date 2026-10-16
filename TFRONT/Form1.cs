@@ -419,7 +419,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "0")
                     {
                         gridViewCell.Style.BackColor = Color.LightBlue;
-                        gridViewCell.ToolTipText ="Candidature";
+                        gridViewCell.ToolTipText = "Candidature";
                     }
                     else if (gridViewCell.Value.ToString() == "+")
                     {
@@ -532,15 +532,15 @@ namespace TFRONT
                 //desactivate deleting for datagridview1 rows
                 dataGridView1.AllowUserToDeleteRows = false;
 
-                dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.White;     
-                
+                dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.White;
+
                 // set buttonTLANG background color to default
                 buttonTLANG.BackColor = SystemColors.Control;
             }
 
 
 
-            
+
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapterTLearn);
             SqlCommand sqlCommand = sqlCommandBuilder.GetUpdateCommand();
             dataAdapterTLearn.Update(dataSet11.Tables[2]);
@@ -671,7 +671,7 @@ namespace TFRONT
 
         private void buttonTBackup_Click(object sender, EventArgs e)
         {
-  
+
 
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(dataAdapterTBackup);
             SqlCommand sqlCommand = sqlCommandBuilder.GetUpdateCommand();
@@ -769,6 +769,30 @@ namespace TFRONT
 
 
 
+        }
+
+        private void tLEARNBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView4_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 1 && e.RowIndex >= 0)
+            {
+                counter.IncrementAll();
+                if (
+                    DateTime.ParseExact(e.Value.ToString(), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture) < DateTime.UtcNow.AddDays(-3))
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                    counter.IncrementRed();
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.White;
+                }
+                labelPercentValue.Text = counter.GetCountPercent() + "%";
+            }
         }
     }
 }
