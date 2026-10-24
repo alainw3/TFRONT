@@ -1,10 +1,5 @@
 using Microsoft.Data.SqlClient;
-using System;
-using System.Data;
-using System.Data.Common;
-using System.Drawing;
 using System.Globalization;
-using System.Windows.Forms;
 
 namespace TFRONT
 {
@@ -20,7 +15,7 @@ namespace TFRONT
         private const int cycleBonneManiere = -2;
         private const int cycleLeaderShip = -2;
         private const int cycleTFront06 = -7;
-        private const int cycleCVEnv = -2;
+        private const int cycleTFront07 = -2;
         private const int cycleCentura = -3;
 
         private const int cycleSP = -3;
@@ -36,7 +31,7 @@ namespace TFRONT
 
         private const int cycleJR = -5;
         private const int cycleCertificate = -14;
-        private const int cycleFront07 = -2;
+        private const int cycleFront20 = -2;
 
         private const int cycleVL = -7;
         private const int cycleJD = -7;
@@ -53,7 +48,7 @@ namespace TFRONT
         private NotifyIcon trayIcon;
 
         private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.Orange, Color.Blue };
-        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Learn", "Le Temps", "Work", "Mada", "Relation", "Strategie" };
+        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Dev", "Le Temps", "Work", "Mada", "Relation", "Strategie" };
 
         public Form1()
         {
@@ -160,7 +155,7 @@ namespace TFRONT
 
             // CV link  / English
             label_Color(dateTimePickerLeadership, labelLeaderShip, cycleLeaderShip);
-            label_Color(dateTimePickerCentura, labelCentura, cycleCentura);
+            label_Color(dateTimePickerTfront04, labellTfront04, cycleCentura);
 
 
 
@@ -169,7 +164,7 @@ namespace TFRONT
             label_Color(dateTimePickerTFront06, labelTFront06, cycleTFront06);
 
             // Envoi candidature
-            label_Color(dateTimePickerCVEnv, labelCVEnv, cycleCVEnv);
+            label_Color(dateTimePickerTFront07, labelTFront07, cycleTFront07);
 
 
             // Sport link 
@@ -193,7 +188,7 @@ namespace TFRONT
             label_Color(dateTimePickerJR, labelJR, cycleJR);
             label_Color(dateTimePickerCertificate, labelCertificate, cycleCertificate);
 
-            label_Color(dateTimePickerTFront07, labelTFront07, cycleFront07);
+            label_Color(dateTimePickerTFront20, labelTFront20, cycleFront20);
 
             label_Color(dateTimePickerVilla, labelVL, cycleVL);
             label_Color(dateTimePickerJardin, labelJD, cycleJD);
@@ -320,10 +315,10 @@ namespace TFRONT
             label_Color(dateTimePickerLeadership, labelLeaderShip, cycleBonneManiere);
         }
 
-        private void dateTimePickerCentura_Validated(object sender, EventArgs e)
+        private void dateTimePickerTFront04_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerCentura, tFRONTBindingCentura.Filter);
-            label_Color(dateTimePickerCentura, labelCentura, cycleTFront06);
+            commandSQL(dateTimePickerTfront04, tFRONTBindingTfront04.Filter);
+            label_Color(dateTimePickerTfront04, labellTfront04, cycleTFront06);
         }
 
         private void dateTimePickerBonneManiere_Validated(object sender, EventArgs e)
@@ -340,8 +335,8 @@ namespace TFRONT
 
         private void dateTimePickerCVEnv_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerCVEnv, tFRONTBindingCVEnv.Filter);
-            label_Color(dateTimePickerCVEnv, labelCVEnv, cycleCVEnv);
+            commandSQL(dateTimePickerTFront07, tFRONTBindingTFront07.Filter);
+            label_Color(dateTimePickerTFront07, labelTFront07, cycleTFront07);
         }
 
         private void dateTimePickerSP_Validated(object sender, EventArgs e)
@@ -414,12 +409,12 @@ namespace TFRONT
                     if (gridViewCell.Value.ToString() == "*")
                     {
                         gridViewCell.Style.BackColor = Color.Gray;
-                        gridViewCell.ToolTipText = "Other activity";
+                        gridViewCell.ToolTipText = "Autre 1";
                     }
                     else if (gridViewCell.Value.ToString() == "0")
                     {
                         gridViewCell.Style.BackColor = Color.LightBlue;
-                        gridViewCell.ToolTipText = "Candidature";
+                        gridViewCell.ToolTipText = "Autre 2";
                     }
                     else if (gridViewCell.Value.ToString() == "+")
                     {
@@ -429,7 +424,7 @@ namespace TFRONT
                     else if (gridViewCell.Value.ToString() == "-")
                     {
                         gridViewCell.Style.BackColor = Color.LightBlue;
-                        gridViewCell.ToolTipText = "Campus";
+                        gridViewCell.ToolTipText = "IT";
                     }
                     else
                     {
@@ -466,22 +461,22 @@ namespace TFRONT
             updateHourly();
         }
 
-        private void autreToolStripMenuItem_Click(object sender, EventArgs e)
+        private void autre1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyAutre();
+            hourly.updateHourlyAutre1();
             updateHourly();
         }
 
-        private void learnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void learnDevToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyLearn();
+            hourly.updateHourlyLearnDev();
             updateHourly();
         }
 
         private void dateTimePickerTFront07_Validated(object sender, EventArgs e)
         {
-            commandSQL(dateTimePickerTFront07, tFRONTBindingSourceTFront07.Filter);
-            label_Color(dateTimePickerTFront07, labelTFront07, cycleFront07);
+            commandSQL(dateTimePickerTFront20, tFRONTBindingSourceTFront20.Filter);
+            label_Color(dateTimePickerTFront20, labelTFront20, cycleFront20);
         }
 
 
@@ -608,9 +603,9 @@ namespace TFRONT
             label_Color(dateTimePickerTFront23, labelTFront23, cycleTFront23);
         }
 
-        private void candidatureMenuItem_Click(object sender, EventArgs e)
+        private void autre2MenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyCandidature();
+            hourly.updateHourlyAutre2();
             updateHourly();
         }
 
@@ -705,9 +700,9 @@ namespace TFRONT
             }
         }
 
-        private void campusMenuItem_Click(object sender, EventArgs e)
+        private void learnITMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyCampus();
+            hourly.updateHourlyLearnIT();
             updateHourly();
         }
 
@@ -793,6 +788,11 @@ namespace TFRONT
                 }
                 labelPercentValue.Text = counter.GetCountPercent() + "%";
             }
+        }
+
+        private void labelCertificate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
