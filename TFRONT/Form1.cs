@@ -48,7 +48,7 @@ namespace TFRONT
         private NotifyIcon trayIcon;
 
         private static readonly Color[] colorHour = { Color.Yellow, Color.Red, Color.Green, Color.Fuchsia, Color.Khaki, Color.Aquamarine, Color.LightGreen, Color.Orange, Color.Blue };
-        private static readonly string[] cellTips = { "JobSearch", "Administration", "Finance", "Dev", "Le Temps", "Work", "Mada", "Relation", "Strategie" };
+        private static readonly string[] cellTips = { "Math", "Administration", "Finance", "Dev", "Le Temps", "Work", "Mada", "Relation", "Strategie" };
 
         public Form1()
         {
@@ -368,9 +368,9 @@ namespace TFRONT
 
         }
 
-        private void jobSearchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void learnMathToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hourly.updateHourlyJobSearch();
+            hourly.updateHourlyLearnMath();
             updateHourly();
 
 

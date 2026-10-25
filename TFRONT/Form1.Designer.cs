@@ -71,10 +71,11 @@
             tLEARNBindingSource = new BindingSource(components);
             contextMenuStripHourly = new ContextMenuStrip(components);
             leadershipStripMenu = new ToolStripMenuItem();
+            toolStripSeparator7 = new ToolStripSeparator();
             learnDevToolStripMenuItem = new ToolStripMenuItem();
             learnITMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
-            jobSearchToolStripMenuItem = new ToolStripMenuItem();
+            learnMathToolStripMenuItem = new ToolStripMenuItem();
             relationToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             administrationToolStripMenuItem1 = new ToolStripMenuItem();
@@ -176,7 +177,6 @@
             AdminToolStripMenuItem = new ToolStripMenuItem();
             backupToolStripMenuItem = new ToolStripMenuItem();
             tLearnToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator7 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingLeadership).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataSet11).BeginInit();
@@ -560,7 +560,7 @@
             // 
             // contextMenuStripHourly
             // 
-            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, toolStripSeparator7, learnDevToolStripMenuItem, learnITMenuItem, toolStripSeparator3, jobSearchToolStripMenuItem, relationToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, workToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autre1ToolStripMenuItem, autre2ToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
+            contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, toolStripSeparator7, learnMathToolStripMenuItem, learnDevToolStripMenuItem, learnITMenuItem, toolStripSeparator3, relationToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, workToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autre1ToolStripMenuItem, autre2ToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
             contextMenuStripHourly.Size = new Size(181, 376);
             contextMenuStripHourly.Opening += contextMenuStripHourly_Opening;
@@ -571,6 +571,11 @@
             leadershipStripMenu.Size = new Size(180, 22);
             leadershipStripMenu.Text = "Leadership";
             leadershipStripMenu.Click += leadershipStripMenu_Click;
+            // 
+            // toolStripSeparator7
+            // 
+            toolStripSeparator7.Name = "toolStripSeparator7";
+            toolStripSeparator7.Size = new Size(177, 6);
             // 
             // learnDevToolStripMenuItem
             // 
@@ -592,12 +597,12 @@
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(177, 6);
             // 
-            // jobSearchToolStripMenuItem
+            // learnMathToolStripMenuItem
             // 
-            jobSearchToolStripMenuItem.Name = "jobSearchToolStripMenuItem";
-            jobSearchToolStripMenuItem.Size = new Size(180, 22);
-            jobSearchToolStripMenuItem.Text = "Job Search";
-            jobSearchToolStripMenuItem.Click += jobSearchToolStripMenuItem_Click;
+            learnMathToolStripMenuItem.Name = "learnMathToolStripMenuItem";
+            learnMathToolStripMenuItem.Size = new Size(180, 22);
+            learnMathToolStripMenuItem.Text = "Learn Math";
+            learnMathToolStripMenuItem.Click += learnMathToolStripMenuItem_Click;
             // 
             // relationToolStripMenuItem
             // 
@@ -1514,11 +1519,6 @@
             tLearnToolStripMenuItem.Text = "TLearn";
             tLearnToolStripMenuItem.Click += tLearnToolStripMenuItem_Click;
             // 
-            // toolStripSeparator7
-            // 
-            toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(177, 6);
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1645,7 +1645,7 @@
         private BindingSource tFRONTBindingMada;
         private Button buttonResetDay;
         private ContextMenuStrip contextMenuStripHourly;
-        private ToolStripMenuItem jobSearchToolStripMenuItem;
+        private ToolStripMenuItem learnMathToolStripMenuItem;
         private ToolStripMenuItem financeToolStripMenuItem;
         private Label labelJR;
         private DateTimePicker dateTimePickerJR;

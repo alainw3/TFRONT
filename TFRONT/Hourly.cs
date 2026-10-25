@@ -40,7 +40,7 @@ namespace TFRONT
             this.dayID = dayID;
         }
 
-        public void updateHourlyJobSearch()
+        public void updateHourlyLearnMath()
         {
 
             sQL.updateHourly(dayID, "1", hourID);
