@@ -72,10 +72,10 @@
             contextMenuStripHourly = new ContextMenuStrip(components);
             leadershipStripMenu = new ToolStripMenuItem();
             toolStripSeparator7 = new ToolStripSeparator();
+            learnMathToolStripMenuItem = new ToolStripMenuItem();
             learnDevToolStripMenuItem = new ToolStripMenuItem();
             learnITMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
-            learnMathToolStripMenuItem = new ToolStripMenuItem();
             relationToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             administrationToolStripMenuItem1 = new ToolStripMenuItem();
@@ -177,6 +177,8 @@
             AdminToolStripMenuItem = new ToolStripMenuItem();
             backupToolStripMenuItem = new ToolStripMenuItem();
             tLearnToolStripMenuItem = new ToolStripMenuItem();
+            labelVarianceValue = new Label();
+            labelVariance = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tFRONTBindingLeadership).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataSet11).BeginInit();
@@ -562,25 +564,32 @@
             // 
             contextMenuStripHourly.Items.AddRange(new ToolStripItem[] { leadershipStripMenu, toolStripSeparator7, learnMathToolStripMenuItem, learnDevToolStripMenuItem, learnITMenuItem, toolStripSeparator3, relationToolStripMenuItem, toolStripSeparator2, administrationToolStripMenuItem1, financeToolStripMenuItem, StategieMenuItem, toolStripSeparator4, workToolStripMenuItem, toolStripSeparator6, leTempsToolStripMenuItem, madaStripMenuItem, toolStripSeparator5, autre1ToolStripMenuItem, autre2ToolStripMenuItem, toolStripSeparator1, noneToolStripMenuItem });
             contextMenuStripHourly.Name = "contextMenuStripHourly";
-            contextMenuStripHourly.Size = new Size(181, 376);
+            contextMenuStripHourly.Size = new Size(154, 354);
             contextMenuStripHourly.Opening += contextMenuStripHourly_Opening;
             // 
             // leadershipStripMenu
             // 
             leadershipStripMenu.Name = "leadershipStripMenu";
-            leadershipStripMenu.Size = new Size(180, 22);
+            leadershipStripMenu.Size = new Size(153, 22);
             leadershipStripMenu.Text = "Leadership";
             leadershipStripMenu.Click += leadershipStripMenu_Click;
             // 
             // toolStripSeparator7
             // 
             toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(177, 6);
+            toolStripSeparator7.Size = new Size(150, 6);
+            // 
+            // learnMathToolStripMenuItem
+            // 
+            learnMathToolStripMenuItem.Name = "learnMathToolStripMenuItem";
+            learnMathToolStripMenuItem.Size = new Size(153, 22);
+            learnMathToolStripMenuItem.Text = "Learn Math";
+            learnMathToolStripMenuItem.Click += learnMathToolStripMenuItem_Click;
             // 
             // learnDevToolStripMenuItem
             // 
             learnDevToolStripMenuItem.Name = "learnDevToolStripMenuItem";
-            learnDevToolStripMenuItem.Size = new Size(180, 22);
+            learnDevToolStripMenuItem.Size = new Size(153, 22);
             learnDevToolStripMenuItem.Text = "Learn Dev";
             learnDevToolStripMenuItem.Click += learnDevToolStripMenuItem_Click;
             // 
@@ -588,97 +597,90 @@
             // 
             learnITMenuItem.ForeColor = Color.FromArgb(255, 128, 0);
             learnITMenuItem.Name = "learnITMenuItem";
-            learnITMenuItem.Size = new Size(180, 22);
+            learnITMenuItem.Size = new Size(153, 22);
             learnITMenuItem.Text = "Learn IT";
             learnITMenuItem.Click += learnITMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
-            // 
-            // learnMathToolStripMenuItem
-            // 
-            learnMathToolStripMenuItem.Name = "learnMathToolStripMenuItem";
-            learnMathToolStripMenuItem.Size = new Size(180, 22);
-            learnMathToolStripMenuItem.Text = "Learn Math";
-            learnMathToolStripMenuItem.Click += learnMathToolStripMenuItem_Click;
+            toolStripSeparator3.Size = new Size(150, 6);
             // 
             // relationToolStripMenuItem
             // 
             relationToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             relationToolStripMenuItem.ForeColor = Color.FromArgb(0, 192, 0);
             relationToolStripMenuItem.Name = "relationToolStripMenuItem";
-            relationToolStripMenuItem.Size = new Size(180, 22);
+            relationToolStripMenuItem.Size = new Size(153, 22);
             relationToolStripMenuItem.Text = "Relation";
             relationToolStripMenuItem.Click += relationToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(150, 6);
             // 
             // administrationToolStripMenuItem1
             // 
             administrationToolStripMenuItem1.Name = "administrationToolStripMenuItem1";
-            administrationToolStripMenuItem1.Size = new Size(180, 22);
+            administrationToolStripMenuItem1.Size = new Size(153, 22);
             administrationToolStripMenuItem1.Text = "Administration";
             administrationToolStripMenuItem1.Click += administrationToolStripMenuItem1_Click;
             // 
             // financeToolStripMenuItem
             // 
             financeToolStripMenuItem.Name = "financeToolStripMenuItem";
-            financeToolStripMenuItem.Size = new Size(180, 22);
+            financeToolStripMenuItem.Size = new Size(153, 22);
             financeToolStripMenuItem.Text = "Finance";
             financeToolStripMenuItem.Click += financeToolStripMenuItem_Click;
             // 
             // StategieMenuItem
             // 
             StategieMenuItem.Name = "StategieMenuItem";
-            StategieMenuItem.Size = new Size(180, 22);
+            StategieMenuItem.Size = new Size(153, 22);
             StategieMenuItem.Text = "Strategie";
             StategieMenuItem.Click += StategieMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(150, 6);
             // 
             // workToolStripMenuItem
             // 
             workToolStripMenuItem.Name = "workToolStripMenuItem";
-            workToolStripMenuItem.Size = new Size(180, 22);
+            workToolStripMenuItem.Size = new Size(153, 22);
             workToolStripMenuItem.Text = "Work";
             workToolStripMenuItem.Click += workToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(177, 6);
+            toolStripSeparator6.Size = new Size(150, 6);
             // 
             // leTempsToolStripMenuItem
             // 
             leTempsToolStripMenuItem.Name = "leTempsToolStripMenuItem";
-            leTempsToolStripMenuItem.Size = new Size(180, 22);
+            leTempsToolStripMenuItem.Size = new Size(153, 22);
             leTempsToolStripMenuItem.Text = "Le Temps";
             leTempsToolStripMenuItem.Click += leTempsToolStripMenuItem_Click;
             // 
             // madaStripMenuItem
             // 
             madaStripMenuItem.Name = "madaStripMenuItem";
-            madaStripMenuItem.Size = new Size(180, 22);
+            madaStripMenuItem.Size = new Size(153, 22);
             madaStripMenuItem.Text = "Mada";
             madaStripMenuItem.Click += madaStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(177, 6);
+            toolStripSeparator5.Size = new Size(150, 6);
             // 
             // autre1ToolStripMenuItem
             // 
             autre1ToolStripMenuItem.Name = "autre1ToolStripMenuItem";
-            autre1ToolStripMenuItem.Size = new Size(180, 22);
+            autre1ToolStripMenuItem.Size = new Size(153, 22);
             autre1ToolStripMenuItem.Text = "Autre 1";
             autre1ToolStripMenuItem.Click += autre1ToolStripMenuItem_Click;
             // 
@@ -687,19 +689,19 @@
             autre2ToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             autre2ToolStripMenuItem.ForeColor = Color.FromArgb(0, 0, 192);
             autre2ToolStripMenuItem.Name = "autre2ToolStripMenuItem";
-            autre2ToolStripMenuItem.Size = new Size(180, 22);
+            autre2ToolStripMenuItem.Size = new Size(153, 22);
             autre2ToolStripMenuItem.Text = "Autre 2";
             autre2ToolStripMenuItem.Click += autre2MenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(150, 6);
             // 
             // noneToolStripMenuItem
             // 
             noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            noneToolStripMenuItem.Size = new Size(180, 22);
+            noneToolStripMenuItem.Size = new Size(153, 22);
             noneToolStripMenuItem.Text = "None";
             noneToolStripMenuItem.Click += noneToolStripMenuItem_Click;
             // 
@@ -718,7 +720,7 @@
             groupBox3.Controls.Add(labelFinance);
             groupBox3.Location = new Point(262, 435);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(326, 178);
+            groupBox3.Size = new Size(307, 171);
             groupBox3.TabIndex = 12;
             groupBox3.TabStop = false;
             groupBox3.Text = "Finance -   Administration";
@@ -914,6 +916,8 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(labelVarianceValue);
+            tabPage1.Controls.Add(labelVariance);
             tabPage1.Controls.Add(dataGridView4);
             tabPage1.Controls.Add(labellTfront04);
             tabPage1.Controls.Add(groupBox7);
@@ -1044,7 +1048,7 @@
             groupBox6.Controls.Add(labelTFront06);
             groupBox6.Location = new Point(262, 276);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(316, 146);
+            groupBox6.Size = new Size(307, 153);
             groupBox6.TabIndex = 27;
             groupBox6.TabStop = false;
             groupBox6.Text = "Job ";
@@ -1105,7 +1109,7 @@
             // 
             labelPercentValue.AutoSize = true;
             labelPercentValue.Font = new Font("Segoe UI", 30F);
-            labelPercentValue.Location = new Point(712, 927);
+            labelPercentValue.Location = new Point(712, 905);
             labelPercentValue.Name = "labelPercentValue";
             labelPercentValue.Size = new Size(111, 54);
             labelPercentValue.TabIndex = 26;
@@ -1116,7 +1120,7 @@
             // 
             labelPercent.AutoSize = true;
             labelPercent.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            labelPercent.Location = new Point(691, 902);
+            labelPercent.Location = new Point(691, 880);
             labelPercent.Name = "labelPercent";
             labelPercent.Size = new Size(148, 25);
             labelPercent.TabIndex = 25;
@@ -1130,7 +1134,7 @@
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { colCodDataGridViewTextBoxColumn, colDescDataGridViewTextBoxColumn1, colTotalDataGridViewTextBoxColumn });
             dataGridView3.DataSource = tFRONTbindingStat;
-            dataGridView3.Location = new Point(268, 619);
+            dataGridView3.Location = new Point(8, 642);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.ReadOnly = true;
             dataGridView3.Size = new Size(320, 339);
@@ -1519,6 +1523,27 @@
             tLearnToolStripMenuItem.Text = "TLearn";
             tLearnToolStripMenuItem.Click += tLearnToolStripMenuItem_Click;
             // 
+            // labelVarianceValue
+            // 
+            labelVarianceValue.AutoSize = true;
+            labelVarianceValue.Font = new Font("Segoe UI", 30F);
+            labelVarianceValue.Location = new Point(445, 905);
+            labelVarianceValue.Name = "labelVarianceValue";
+            labelVarianceValue.Size = new Size(76, 54);
+            labelVarianceValue.TabIndex = 31;
+            labelVarianceValue.Text = "0.5";
+            labelVarianceValue.TextChanged += labelVarianceValue_TextChanged;
+            // 
+            // labelVariance
+            // 
+            labelVariance.AutoSize = true;
+            labelVariance.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            labelVariance.Location = new Point(432, 880);
+            labelVariance.Name = "labelVariance";
+            labelVariance.Size = new Size(105, 25);
+            labelVariance.TabIndex = 30;
+            labelVariance.Text = "VARIANCE";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1742,5 +1767,7 @@
         private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private BindingSource tITBindingSource;
         private ToolStripSeparator toolStripSeparator7;
+        private Label labelVarianceValue;
+        private Label labelVariance;
     }
 }

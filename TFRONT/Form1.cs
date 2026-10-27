@@ -135,6 +135,7 @@ namespace TFRONT
         {
 
             textBoxTotalHour.Text = hourly.getTotalHour();
+            labelVarianceValue.Text = stat.getTotalVariance();
         }
 
 
@@ -792,6 +793,31 @@ namespace TFRONT
 
         private void labelCertificate_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void labelVarianceValue_TextChanged(object sender, EventArgs e)
+        {
+            //Change labelVarianceValue color to red if  is labelVarianceValue is less than 0.5, green if else
+            if (double.TryParse(labelVarianceValue.Text, out double variance))
+            {
+                if (variance < 0.5)
+                {
+                    labelVarianceValue.BackColor = Color.Red;
+                    labelVarianceValue.ForeColor = Color.White;
+                }
+                else
+                {
+                    labelVarianceValue.BackColor = Color.Green;
+                    labelVarianceValue.ForeColor = Color.Black;
+                }
+            }
+
+            // truncate labelVarianceValue to 2 decimal places
+            if (double.TryParse(labelVarianceValue.Text, out double varianceValue))
+            {
+                labelVarianceValue.Text = varianceValue.ToString("0.00");
+            }
 
         }
     }

@@ -15,5 +15,11 @@ namespace TFRONT
         {
             return sQL.GetDataAdapterStat();
         }
+
+        public string getTotalVariance()
+        {
+            return sQL.getTotalVariance();
+        }
+
     }
 }
